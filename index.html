@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Markets Forecaster</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script defer src="assets/js/logic.js"></script>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="content">
+        <div class="fundDetailsArea">
+          <div class="fundDetailsAreaHeaderArea">
+            <h2>Fund Details</h2>
+          </div>
+          <div class="fundDetailsAreaContentArea">
+            <form>
+              <label for="fname">Fund Name</label></br>
+              <input type="text" id="fname" name="fname"></br>
+              <label for="wmcid">Wellington Account ID</label></br>
+              <input type="text" id="wmcid" name="wmcid"></br>
+              <label for="ssbid">State Street Fund ID</label></br>
+              <input type="text" id="ssbid" name="ssbid"></br>
+              <label for="launchdate">Target Launch Date</label></br>
+              <input type="date" id="launchdate" name="launchdate"></br>
+              <label for="amldate">AML/KYC Submitted to State Street</label></br>
+              <input type="date" id="amldate" name="amldate">
+            </form>
+            <table>
+              <tr>
+                <th>AML/KYC Complete</th>
+                <th>MCH Done</th>
+                <th>Docs Due from SSC</th>
+                <th>Docs Due to SSC</th>
+                <th>SSC to Local</th>
+              </tr>
+              <tr>
+                <td id="amlKycCompleteDateCell">XX XXX XXXX</td>
+                <td id="mchDoneDateCell">XX XXX XXXX</td>
+                <td id="docsDueFromSscDateCell">XX XXX XXXX</td>
+                <td id="docsDueToSscDateCell">XX XXX XXXX</td>
+                <td id="sscToLocalDateCell">XX XXX XXXX</td>
+              </tr>
+           </table>
+           <button type="button" id="submitFundDetails" onclick="submitFundDetails()">Submit changes</button>
+           <button>Export to Excel</button><button>Print</button>
+          </div>
+        </div>
+        <div class="marketsArea">
+          <div class="marketsAreaHeaderArea">
+            <h2>Markets</h2>
+          </div>
+          <div class="nonDocMarketsArea">
+            <h3>Non Document Markets</h3>
+
+            <!-- START NON DOCS DAY 1 -->
+            <h4>Required - Day 1</h4>
+            <p>Could impact funding date if not obtained</p>
+            <div id="nonDocsDayOne"></div>
+            <table id="table1"></table>
+            <button data-modal-target="#modal">Add Day 1 Non-Doc Markets</button>
+            <div class="modal" id="modal">
+              <div class="modal-header">
+                <div class="title">Example Modal</div>
+                <button data-close-button class="close-button">&times;</button>
+              </div>
+              <div class="modal-body">
+                <!-- <button>Update selected markets</button> -->
+                <form onsubmit="return false" id="marketsList"></form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="submitMarkets" onclick="getCheckedDayOneNonDocMarkets();removeMarketsTables();checkforchecks()">Save Markets</button>
+              </div>
+            </div>
+            <div id="overlay"></div>
+            <!-- END NON DOCS DAY 1 -->
+
+            <!-- START NON DOCS ASAP -->
+            <h4>Required - As soon as possible</h4>
+            <div id="nonDocsDayAsap"></div>
+            <table id="table2"></table>
+            <button data-modal-target="#modal">Add ASAP Non-Doc Markets</button>
+            <div class="modal" id="modal">
+              <div class="modal-header">
+                <div class="title">Example Modal</div>
+                <button data-close-button class="close-button">&times;</button>
+              </div>
+              <div class="modal-body">
+                <!-- <button>Update selected markets</button> -->
+                <form onsubmit="return false" id="marketsList"></form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="submitMarkets" onclick="getCheckedAsapNonDocMarkets();removeNonDocAsapMarketsTables();updateNonDocAsapMarketTables()">Save Markets</button>
+              </div>
+            </div>
+            <div id="overlay"></div>
+            <!-- END NON DOCS ASAP -->
+
+          </div>
+          <div class="docMarketsArea">
+            <h3>Document Markets</h3>
+            <h4>Required - Day 1</h4>
+            <p>Could impact funding date if not obtained</p>
+            <button>Add Day 1 Doc Markets</button>
+            <h4>Required - As soon as possible</h4>
+            <button>Add Required ASAP Doc Markets </button>
+          </div>
+        </div>
+      </div>
+      <div class="header">
+        <h1>Fund Launch Markets Forecaster</h1>
+      </div>
+    </div>
+    <div id="overlay"></div>
+  </body>
+</html>

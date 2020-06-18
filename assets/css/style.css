@@ -1,0 +1,178 @@
+body {
+  overflow: hidden;
+}
+
+.grid-container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 8fr;
+  gap: 1px 1px;
+  grid-template-areas: "header" "content";
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: "fundDetailsArea marketsArea";
+  grid-area: content;
+  overflow: hidden;
+}
+
+.fundDetailsArea {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 0.8fr;
+  gap: 1px 1px;
+  grid-template-areas: "fundDetailsAreaHeaderArea" "fundDetailsAreaContentArea";
+  grid-area: fundDetailsArea;
+}
+
+.fundDetailsAreaHeaderArea {
+  grid-area: fundDetailsAreaHeaderArea;
+}
+
+.fundDetailsAreaContentArea {
+  grid-area: fundDetailsAreaContentArea;
+}
+
+.marketsArea {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 0.4fr 0.4fr;
+  gap: 1px 1px;
+  grid-template-areas: "marketsAreaHeaderArea" "nonDocMarketsArea" "docMarketsArea";
+  grid-area: marketsArea;
+  overflow-y: scroll;
+}
+
+.fundDetailsArea,
+.marketsArea {
+  border: solid 1px;
+  /* overflow-y: scroll; */
+}
+
+.marketsAreaHeaderArea {
+  grid-area: marketsAreaHeaderArea;
+}
+
+.nonDocMarketsArea {
+  grid-area: nonDocMarketsArea;
+  /* overflow-y: scroll; */
+}
+
+.docMarketsArea {
+  grid-area: docMarketsArea;
+  /* overflow-y: scroll; */
+}
+
+.header {
+  grid-area: header;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 300px;
+  max-width: 80%;
+  height: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-footer {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid black; */
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+  height: 80%;
+  overflow: auto;
+  border-bottom: 1px solid black;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Ul {
+  margin: auto;
+}
+
+li {
+  list-style-type: none;
+  border: solid 1px black;
+  padding: 5px 30px;
+  background-color: white;
+}
+
+.unselected {
+  background-color: white;
+}
+
+.selected {
+  background-color: blue;
+} */

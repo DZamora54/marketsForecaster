@@ -1,0 +1,342 @@
+[
+  {
+    "name": "Albania",
+    "docMarket": "No",
+    "timeframeToOpen": 3
+  },
+  {
+    "name": "Argentina",
+    "docMarket": "No",
+    "timeframeToOpen": 7
+  },
+  {
+    "name": "Australia",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Austria",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Bahrain",
+    "docMarket": "No",
+    "timeframeToOpen": 5
+  },
+  {
+    "name": "Belgium",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Bermuda",
+    "docMarket": "No",
+    "timeframeToOpen": 3
+  },
+  {
+    "name": "Bosnia",
+    "docMarket": "No",
+    "timeframeToOpen": 4
+  },
+  {
+    "name": "Botswana",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Bulgaria",
+    "docMarket": "No",
+    "timeframeToOpen": 3
+  },
+  {
+    "name": "Canada",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Clearstream",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Costa Rica",
+    "docMarket": "No",
+    "timeframeToOpen": 4
+  },
+  {
+    "name": "Croatia",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Cyprus",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Czech Republic",
+    "docMarket": "No",
+    "timeframeToOpen": 5
+  },
+  {
+    "name": "Denmark",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Estonia",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Eswatini",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Euroclear",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Finland",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "France",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Georgia, Republic of",
+    "docMarket": "No",
+    "timeframeToOpen": 5
+  },
+  {
+    "name": "Germany",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Ghana",
+    "docMarket": "No",
+    "timeframeToOpen": 5
+  },
+  {
+    "name": "Hong Kong (HKD)",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Hungary",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Ireland",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Israel",
+    "docMarket": "No",
+    "timeframeToOpen": 3
+  },
+  {
+    "name": "Italy",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Ivory Coast",
+    "docMarket": "No",
+    "timeframeToOpen": 5
+  },
+  {
+    "name": "Japan",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Jordan",
+    "docMarket": "No",
+    "timeframeToOpen": 7
+  },
+  {
+    "name": "Kazakhstan",
+    "docMarket": "No",
+    "timeframeToOpen": 35
+  },
+  {
+    "name": "Kenya",
+    "docMarket": "No",
+    "timeframeToOpen": 3
+  },
+  {
+    "name": "Kuwait",
+    "docMarket": "No",
+    "timeframeToOpen": 20
+  },
+  {
+    "name": "Latvia",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Lithuania",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Luxembourg",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Malawi",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Mauritius",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Mexico",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Morocco",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Namibia",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Netherlands",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "New Zealand",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Nigeria",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Norway",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Oman",
+    "docMarket": "No",
+    "timeframeToOpen": 5
+  },
+  {
+    "name": "Panama",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Philippines",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Poland",
+    "docMarket": "No",
+    "timeframeToOpen": 3
+  },
+  {
+    "name": "Portugal",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Romania",
+    "docMarket": "No",
+    "timeframeToOpen": 7
+  },
+  {
+    "name": "Singapore",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "South Africa",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Spain",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Sweden",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Switzerland",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "Tanzania",
+    "docMarket": "No",
+    "timeframeToOpen": 5
+  },
+  {
+    "name": "Tunisia",
+    "docMarket": "No",
+    "timeframeToOpen": 5
+  },
+  {
+    "name": "Uganda",
+    "docMarket": "No",
+    "timeframeToOpen": 5
+  },
+  {
+    "name": "Ukraine",
+    "docMarket": "No",
+    "timeframeToOpen": 14
+  },
+  {
+    "name": "United Kingdom",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  },
+  {
+    "name": "United States",
+    "docMarket": "No",
+    "timeframeToOpen": 1
+  },
+  {
+    "name": "Uruguay",
+    "docMarket": "No",
+    "timeframeToOpen": 5
+  },
+  {
+    "name": "Bangladesh",
+    "docMarket": "Yes",
+    "timeframeToOpen": 3
+  },
+  {
+    "name": "",
+    "docMarket": "No",
+    "timeframeToOpen": 2
+  }
+]
