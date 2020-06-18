@@ -21,22 +21,22 @@
             <form>
               <label for="fname">Fund Name</label></br>
               <input type="text" id="fname" name="fname"></br>
-              <label for="wmcid">Wellington Account ID</label></br>
+              <label for="wmcid">Internal Account ID</label></br>
               <input type="text" id="wmcid" name="wmcid"></br>
-              <label for="ssbid">State Street Fund ID</label></br>
+              <label for="ssbid">External Fund ID</label></br>
               <input type="text" id="ssbid" name="ssbid"></br>
               <label for="launchdate">Target Launch Date</label></br>
               <input type="date" id="launchdate" name="launchdate"></br>
-              <label for="amldate">AML/KYC Submitted to State Street</label></br>
+              <label for="amldate">AML/KYC Submitted to External</label></br>
               <input type="date" id="amldate" name="amldate">
             </form>
             <table>
               <tr>
                 <th>AML/KYC Complete</th>
-                <th>MCH Done</th>
-                <th>Docs Due from SSC</th>
-                <th>Docs Due to SSC</th>
-                <th>SSC to Local</th>
+                <th>System Add Done</th>
+                <th>Docs Due from External</th>
+                <th>Docs Due to External</th>
+                <th>External to Local</th>
               </tr>
               <tr>
                 <td id="amlKycCompleteDateCell">XX XXX XXXX</td>
@@ -83,18 +83,18 @@
             <h4>Required - As soon as possible</h4>
             <div id="nonDocsDayAsap"></div>
             <table id="table2"></table>
-            <button data-modal-target="#modal">Add ASAP Non-Doc Markets</button>
-            <div class="modal" id="modal">
+            <button data-modal-target="#modal2">Add ASAP Non-Doc Markets</button>
+            <div class="modal" id="modal2">
               <div class="modal-header">
-                <div class="title">Example Modal</div>
+                <div class="title">Example Modal 2</div>
                 <button data-close-button class="close-button">&times;</button>
               </div>
               <div class="modal-body">
                 <!-- <button>Update selected markets</button> -->
-                <form onsubmit="return false" id="marketsList"></form>
+                <form onsubmit="return false" id="marketsList2"></form>
               </div>
               <div class="modal-footer">
-                <button type="button" id="submitMarkets" onclick="getCheckedAsapNonDocMarkets();removeNonDocAsapMarketsTables();updateNonDocAsapMarketTables()">Save Markets</button>
+                <button type="button" id="submitMarkets2" onclick="getCheckedAsapNonDocMarkets();removeNonDocAsapMarketsTables();checkforchecks2()">Save Markets</button>
               </div>
             </div>
             <div id="overlay"></div>

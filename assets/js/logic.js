@@ -795,6 +795,35 @@ function populateNonDocMarketsToChooseFrom() {
 }
 /* END ADD MARKETS CHECKBOXES TO MODAL */
 
+/* START ADD NON DOC ASAP MARKETS CHECKBOXES TO MODAL */
+// On load calls populateMarketsToChooseFrom function
+window.addEventListener("load", function () {
+  this.populateNonDocAsapMarketsToChooseFrom();
+});
+
+// Populate market list from marketData
+function populateNonDocAsapMarketsToChooseFrom() {
+  for (let i = 0; i < marketsData.length; i++) {
+    if (marketsData[i].docMarket == "No") {
+      console.log(1);
+      let asapMarkets = document.getElementById("marketsList2");
+      let asapCheckboxDiv = document.createElement("div");
+      let asapCheckbox = document.createElement("input");
+      asapCheckbox.type = "checkbox";
+      asapCheckbox.name = "asapName";
+      asapCheckbox.value = marketsData[i].name;
+      asapCheckbox.id = "nonDocAsapCheckboxId";
+      let asapLabel = document.createElement("label");
+      asapLabel.htmlFor = "nonDocAsapCheckboxId";
+      asapLabel.appendChild(document.createTextNode(marketsData[i].name));
+      asapMarkets.appendChild(asapCheckboxDiv);
+      asapCheckboxDiv.appendChild(asapCheckbox);
+      asapCheckboxDiv.appendChild(asapLabel);
+    }
+  }
+}
+/* END ADD NON DOC ASAP MARKETS CHECKBOXES TO MODAL */
+
 /* START UPDATE DAY ONE NON DOC MARKETS REQUESTED KEY DEPENDING ON CHECKED BOOLEAN AND REQUESTED STATUS */
 // updates the marketsData requested key to be "Yes" or "No" depending if the checkbox is checked or not checked
 function getCheckedDayOneNonDocMarkets() {
@@ -833,7 +862,6 @@ function getCheckedDayOneNonDocMarkets() {
 function checkCheckboxes(marketRequested) {
   return marketRequested["requested"] == "No";
 }
-
 function checkforchecks() {
   if (marketsData.every(checkCheckboxes)) {
     console.log("no markets requested");
@@ -843,39 +871,51 @@ function checkforchecks() {
   }
 }
 
+function checkCheckboxes2(marketRequested) {
+  return marketRequested["requested"] == "No";
+}
+function checkforchecks2() {
+  if (marketsData.every(checkCheckboxes)) {
+    console.log("no markets requested");
+  } else {
+    console.log("someone picked a market");
+    updateNonDocAsapMarketTables();
+  }
+}
+
 /* START UPDATE ASAP NON DOC MARKETS REQUESTED KEY DEPENDING ON CHECKED BOOLEAN AND REQUESTED STATUS */
 // updates the marketsData requested key to be "Yes" or "No" depending if the checkbox is checked or not checked
-// function getCheckedAsapNonDocMarkets() {
-//   console.log("hello");
-//   let checkboxes = document.getElementsByName("name");
-//   for (var checkbox of checkboxes) {
-//     for (let i = 0; i < marketsData.length; i++) {
-//       if (marketsData[i]["requeted"] == "Yes - Day One") {
-//         document.getElementById("nonDocCheckboxId").disabled = true;
-//       }
-//     }
-//     if (checkbox.checked) {
-//       let temp = checkbox.value;
-//       console.log("temp is " + checkbox.value);
-//       for (let i = 0; i < marketsData.length; i++) {
-//         if (marketsData[i]["name"] === checkbox.value && checkbox.checked) {
-//           console.log(checkbox.value + " has been selected.");
-//           marketsData[i]["requested"] = "Yes - ASAP";
-//         }
-//       }
-//     }
-//     if (checkbox.checked == false) {
-//       for (let i = 0; i < marketsData.length; i++) {
-//         if (
-//           marketsData[i]["name"] === checkbox.value &&
-//           checkbox.checked == false
-//         ) {
-//           marketsData[i]["requested"] = "No";
-//         }
-//       }
-//     }
-//   }
-// }
+function getCheckedAsapNonDocMarkets() {
+  console.log("hello");
+  let checkboxes = document.getElementsByName("asapName");
+  for (var checkbox of checkboxes) {
+    for (let i = 0; i < marketsData.length; i++) {
+      if (marketsData[i]["requested"] == "Yes - Day One") {
+        document.getElementById("nonDocAsapCheckboxId").disabled = true;
+      }
+    }
+    if (checkbox.checked) {
+      let temp = checkbox.value;
+      console.log("temp is " + checkbox.value);
+      for (let i = 0; i < marketsData.length; i++) {
+        if (marketsData[i]["name"] === checkbox.value && checkbox.checked) {
+          console.log(checkbox.value + " has been selected.");
+          marketsData[i]["requested"] = "Yes - ASAP";
+        }
+      }
+    }
+    if (checkbox.checked == false) {
+      for (let i = 0; i < marketsData.length; i++) {
+        if (
+          marketsData[i]["name"] === checkbox.value &&
+          checkbox.checked == false
+        ) {
+          marketsData[i]["requested"] = "No";
+        }
+      }
+    }
+  }
+}
 /* END UPDATE ASAP NON DOC MARKETS REQUESTED KEY DEPENDING ON CHECKED BOOLEAN AND REQUESTED STATUS */
 
 /*  START REMOVE NON DOC DAY 1 MARKETS TABLES */
@@ -896,20 +936,20 @@ function removeMarketsTables() {
 /*  END REMOVE NON DOC DAY 1 MARKETS TABLES */
 
 /*  START REMOVE NON DOC ASAP MARKETS TABLES */
-// function removeNonDocAsapMarketsTables() {
-//   console.log("removing markets tables");
-//   let elementExists = document.getElementById("table2header");
-//   console.log(elementExists);
-//   if (elementExists) {
-//     console.log("table2header exists");
-//     let elem = document.getElementById("table2header");
-//     elem.parentNode.removeChild(elem);
-//     let elem1 = document.getElementById("tbodyid");
-//     elem1.parentNode.removeChild(elem1);
-//   } else {
-//     console.log("table1header does not exist");
-//   }
-// }
+function removeNonDocAsapMarketsTables() {
+  console.log("removing markets tables");
+  let elementExists = document.getElementById("table2header");
+  console.log(elementExists);
+  if (elementExists) {
+    console.log("table2header exists");
+    let elem = document.getElementById("table2header");
+    elem.parentNode.removeChild(elem);
+    let elem1 = document.getElementById("tbodyid");
+    elem1.parentNode.removeChild(elem1);
+  } else {
+    console.log("table2header does not exist");
+  }
+}
 /*  END REMOVE NON DOC DAY ASAP MARKETS TABLES */
 
 /* START CREATE NON DOC DAY 1 MARKETS TABLES */
@@ -962,50 +1002,50 @@ function generateTable(table, data) {
 
 /* START CREATE NON DOC ASAP MARKETS TABLES */
 // the table is getting created each time the button is clicked and appending to any existing table. i need to delete any existing table first and then create the table only once for each click
-// function updateNonDocAsapMarketTables() {
-//   console.log("Hola");
-//   console.log("Red Red Wine");
-//   let table = document.querySelector("#table2");
-//   let data = ["name", "timeframeToOpen", "openDate"];
-//   console.log(data);
-//   generateTable(table, marketsData); // generate the table first
-//   generateTableHead(table, data); // then the head
-//   let tbody = table.querySelector("tbody");
-//   tbody.classList.add("tbodyClass");
-//   tbody.setAttribute("id", "tbodyid");
-// }
+function updateNonDocAsapMarketTables() {
+  console.log("Hola");
+  console.log("Red Red Wine");
+  let table = document.querySelector("#table2");
+  let data = ["name", "timeframeToOpen", "openDate"];
+  console.log(data);
+  generateTable2(table, marketsData); // generate the table first
+  generateTable2Head(table, data); // then the head
+  let tbody = table.querySelector("tbody");
+  tbody.classList.add("tbodyClass");
+  tbody.setAttribute("id", "tbodyid");
+}
 
 // // Creates the table header
-// function generateTable2Head(table, data) {
-//   let thead = table.createTHead();
-//   let row = thead.insertRow();
-//   thead.setAttribute("id", "table2header");
-//   for (let key of data) {
-//     let th = document.createElement("th");
-//     let text = document.createTextNode(key);
-//     th.appendChild(text);
-//     row.appendChild(th);
-//   }
-// }
+function generateTable2Head(table, data) {
+  let thead = table.createTHead();
+  let row = thead.insertRow();
+  thead.setAttribute("id", "table2header");
+  for (let key of data) {
+    let th = document.createElement("th");
+    let text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
+  }
+}
 
 // // Creates the table body
-// function generateTable(table, data) {
-//   for (let element of data) {
-//     if (element["requested"] == "Yes - ASAP") {
-//       console.log("element: " + element["name"]);
-//       let row = table.insertRow();
-//       let cell = row.insertCell();
-//       let cell2 = row.insertCell();
-//       let cell3 = row.insertCell();
-//       let text = document.createTextNode(element["name"]);
-//       let text2 = document.createTextNode(element["timeframeToOpen"]);
-//       let text3 = document.createTextNode(element["openDate"]);
-//       cell.appendChild(text);
-//       cell2.appendChild(text2);
-//       cell3.appendChild(text3);
-//     }
-//   }
-// }
+function generateTable2(table, data) {
+  for (let element of data) {
+    if (element["requested"] == "Yes - ASAP") {
+      console.log("element: " + element["name"]);
+      let row = table.insertRow();
+      let cell = row.insertCell();
+      let cell2 = row.insertCell();
+      let cell3 = row.insertCell();
+      let text = document.createTextNode(element["name"]);
+      let text2 = document.createTextNode(element["timeframeToOpen"]);
+      let text3 = document.createTextNode(element["openDate"]);
+      cell.appendChild(text);
+      cell2.appendChild(text2);
+      cell3.appendChild(text3);
+    }
+  }
+}
 /* END CREATE NON DOC ASAP MARKETS TABLES */
 
 /* SUBMIT FUND DETAILS */
