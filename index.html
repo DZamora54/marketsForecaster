@@ -19,16 +19,16 @@
           </div>
           <div class="fundDetailsAreaContentArea">
             <form>
-              <label for="fname">Fund Name</label></br>
-              <input type="text" id="fname" name="fname"></br>
-              <label for="wmcid">Internal Account ID</label></br>
-              <input type="text" id="wmcid" name="wmcid"></br>
-              <label for="ssbid">External Fund ID</label></br>
-              <input type="text" id="ssbid" name="ssbid"></br>
-              <label for="launchdate">Target Launch Date</label></br>
-              <input type="date" id="launchdate" name="launchdate"></br>
-              <label for="amldate">AML/KYC Submitted to External</label></br>
-              <input type="date" id="amldate" name="amldate">
+              <label for="fname">Fund Name</label><br />
+              <input type="text" id="fname" name="fname" /><br />
+              <label for="wmcid">Internal Account ID</label><br />
+              <input type="text" id="wmcid" name="wmcid" /><br />
+              <label for="ssbid">External Fund ID</label><br />
+              <input type="text" id="ssbid" name="ssbid" /><br />
+              <label for="launchdate">Target Launch Date</label><br />
+              <input type="date" id="launchdate" name="launchdate" /><br />
+              <label for="amldate">AML/KYC Submitted to External</label><br />
+              <input type="date" id="amldate" name="amldate" />
             </form>
             <table>
               <tr>
@@ -45,27 +45,33 @@
                 <td id="docsDueToSscDateCell">XX XXX XXXX</td>
                 <td id="sscToLocalDateCell">XX XXX XXXX</td>
               </tr>
-           </table>
-           <button type="button" id="submitFundDetails" onclick="submitFundDetails()">Submit changes</button>
-           <button>Export to Excel</button><button>Print</button>
+            </table>
+            <button
+              type="button"
+              id="submitFundDetails"
+              onclick="submitFundDetails()"
+            >
+              Submit changes
+            </button>
+            <button>Export to Excel</button><button>Print</button>
           </div>
         </div>
+
         <div class="marketsArea">
           <div class="marketsAreaHeaderArea">
             <h2>Markets</h2>
           </div>
-          <div class="nonDocMarketsArea">
-            <h3>Non Document Markets</h3>
 
-            <!-- START NON DOCS DAY 1 -->
-            <h4>Required - Day 1</h4>
-            <p>Could impact funding date if not obtained</p>
-            <div id="nonDocsDayOne"></div>
-            <table id="table1"></table>
-            <button data-modal-target="#modal">Add Day 1 Non-Doc Markets</button>
+          <!-- START DAY ONE MARKETS AREA -->
+          <div class="dayOneMarketsArea">
+            <h3>Day 1 Markets</h3>
+            <p>Could impact funding if not obtained</p>
+
+            <!-- START DAY ONE MODAL -->
+            <button data-modal-target="#modal">Add Day 1 Markets</button>
             <div class="modal" id="modal">
               <div class="modal-header">
-                <div class="title">Example Modal</div>
+                <div class="title">Select Day 1 Markets</div>
                 <button data-close-button class="close-button">&times;</button>
               </div>
               <div class="modal-body">
@@ -73,20 +79,43 @@
                 <form onsubmit="return false" id="marketsList"></form>
               </div>
               <div class="modal-footer">
-                <button type="button" id="submitMarkets" onclick="getCheckedDayOneNonDocMarkets();removeMarketsTables();checkforchecks()">Save Markets</button>
+                <button
+                  type="button"
+                  id="submitMarkets"
+                  onclick="getCheckedDayOneMarkets(); removeNonDocDayOneMarketsTables(); removeDocDayOneMarketsTables(); checkforDayOneNonDoc(); checkforDayOneDoc()"
+                >
+                  Save Markets
+                </button>
               </div>
             </div>
             <div id="overlay"></div>
+            <!-- END DAY ONE MODAL -->
+
+            <!-- START NON DOCS DAY 1 -->
+            <h4>Day 1 Non Doc Markets</h4>
+            <div id="nonDocsDayOne"></div>
+            <table id="table1"></table>
             <!-- END NON DOCS DAY 1 -->
 
-            <!-- START NON DOCS ASAP -->
-            <h4>Required - As soon as possible</h4>
-            <div id="nonDocsDayAsap"></div>
+            <!-- START DOCS DAY 1 -->
+            <h4>Day 1 Doc Markets</h4>
+            <div id="docsDayOne"></div>
             <table id="table2"></table>
-            <button data-modal-target="#modal2">Add ASAP Non-Doc Markets</button>
+            <!-- END DOCS DAY 1 -->
+          </div>
+          <!-- END DAY ONE AREA -->
+
+          <!-- START REQUIRED ASAP AREA -->
+          <div class="asapMarketsArea">
+            <h3>Required ASAP Markets</h3>
+
+            <!-- START REQUIRED ASAP MODAL -->
+            <button data-modal-target="#modal2">
+              Add Required ASAP Markets
+            </button>
             <div class="modal" id="modal2">
               <div class="modal-header">
-                <div class="title">Example Modal 2</div>
+                <div class="title">Select Required ASAP Markets</div>
                 <button data-close-button class="close-button">&times;</button>
               </div>
               <div class="modal-body">
@@ -94,21 +123,34 @@
                 <form onsubmit="return false" id="marketsList2"></form>
               </div>
               <div class="modal-footer">
-                <button type="button" id="submitMarkets2" onclick="getCheckedAsapNonDocMarkets();removeNonDocAsapMarketsTables();checkforchecks2()">Save Markets</button>
+                <button
+                  type="button"
+                  id="submitMarkets2"
+                  onclick="getCheckedAsapMarkets(); removeNonDocAsapMarketsTables(); removeDocAsapMarketsTables(); checkforAsapNonDoc(); checkforAsapDoc()"
+                >
+                  Update Market Tables
+                  <!-- onclick="getCheckedDayOneMarkets(); removeNonDocDayOneMarketsTables(); removeDocDayOneMarketsTables(); checkforDayOneNonDoc(); checkforDayOneDoc()"
+                  Save Markets -->
+                </button>
+                <!-- ;removeAsapMarketsTables();checkforchecks2() -->
               </div>
             </div>
             <div id="overlay"></div>
-            <!-- END NON DOCS ASAP -->
+            <!-- END REQUIRED ASAP MOAL -->
 
+            <!-- START NON DOC ASAP -->
+            <h4>Required - ASAP Non Doc Markets</h4>
+            <div id="nonDocAsap"></div>
+            <table id="table3"></table>
+            <!-- END NON DOC ASAP -->
+
+            <!-- START DOCS ASAP -->
+            <h4>Required - ASAP Doc Markets</h4>
+            <div id="docsAsap"></div>
+            <table id="table4"></table>
+            <!-- END DOCS ASAP -->
           </div>
-          <div class="docMarketsArea">
-            <h3>Document Markets</h3>
-            <h4>Required - Day 1</h4>
-            <p>Could impact funding date if not obtained</p>
-            <button>Add Day 1 Doc Markets</button>
-            <h4>Required - As soon as possible</h4>
-            <button>Add Required ASAP Doc Markets </button>
-          </div>
+          <!-- END REQUIRED ASAP AREA -->
         </div>
       </div>
       <div class="header">

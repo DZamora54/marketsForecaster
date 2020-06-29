@@ -44,7 +44,7 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 0.2fr 0.4fr 0.4fr;
   gap: 1px 1px;
-  grid-template-areas: "marketsAreaHeaderArea" "nonDocMarketsArea" "docMarketsArea";
+  grid-template-areas: "marketsAreaHeaderArea" "dayOneMarketsArea" "asapMarketsArea";
   grid-area: marketsArea;
   overflow-y: scroll;
 }
@@ -59,13 +59,13 @@ body {
   grid-area: marketsAreaHeaderArea;
 }
 
-.nonDocMarketsArea {
-  grid-area: nonDocMarketsArea;
+.dayOneMarketsArea {
+  grid-area: dayOneMarketsArea;
   /* overflow-y: scroll; */
 }
 
-.docMarketsArea {
-  grid-area: docMarketsArea;
+.asapMarketsArea {
+  grid-area: asapMarketsArea;
   /* overflow-y: scroll; */
 }
 
