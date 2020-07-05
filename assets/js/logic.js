@@ -1577,7 +1577,7 @@ function convertMonthStringToInt(monthString) {
 }
 /* END CONVERT STRING DATES TO TIME */
 
-// document.onload = alert("Browsers other than Chrome are not supported")
+document.onload = alert("Browsers other than Chrome are not supported")
 
 
 // CHANGE THE BACKGROUND OF AN LI ELEMENT ONCLICK
