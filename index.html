@@ -12,6 +12,10 @@
   </head>
   <body>
     <div class="grid-container">
+      <div class="header">
+        <h1>Fund Launch Markets Forecaster</h1>
+      </div>
+
       <div class="content">
         <div class="fundDetailsArea">
           <div class="fundDetailsAreaHeaderArea">
@@ -19,41 +23,90 @@
           </div>
           <div class="fundDetailsAreaContentArea">
             <form>
-              <label for="fname">Fund Name</label><br />
-              <input type="text" id="fname" name="fname" /><br />
-              <label for="wmcid">Internal Account ID</label><br />
-              <input type="text" id="wmcid" name="wmcid" /><br />
-              <label for="ssbid">External Fund ID</label><br />
-              <input type="text" id="ssbid" name="ssbid" /><br />
-              <label for="launchdate">Target Launch Date</label><br />
-              <input type="date" id="launchdate" name="launchdate" /><br />
-              <label for="amldate">AML/KYC Submitted to External</label><br />
-              <input type="date" id="amldate" name="amldate" />
+              <div class="fnameInputArea">
+                <label for="fname">Fund Name</label><br />
+                <input class="fundInput" type="text" id="fname" name="fname" />
+              </div>
+              <div id="idInputArea">
+                <div class="inputArea">
+                  <label for="wmcid">Internal Account ID</label><br />
+                  <input
+                    class="fundInput"
+                    type="text"
+                    id="wmcid"
+                    name="wmcid"
+                  />
+                </div>
+
+                <div class="inputArea">
+                  <label for="ssbid">External Fund ID</label><br />
+                  <input
+                    class="fundInput"
+                    type="text"
+                    id="ssbid"
+                    name="ssbid"
+                  />
+                </div>
+              </div>
+
+              <div class="inputArea">
+                <label for="launchdate">Target Launch Date</label><br />
+                <input
+                  class="fundInput"
+                  type="date"
+                  id="launchdate"
+                  name="launchdate"
+                />
+              </div>
+
+              <div class="inputArea">
+                <label for="amldate">AML/KYC Submitted to External</label><br />
+                <input
+                  class="fundInput"
+                  type="date"
+                  id="amldate"
+                  name="amldate"
+                />
+              </div>
             </form>
-            <table>
-              <tr>
-                <th>AML/KYC Complete</th>
-                <th>System Add Done</th>
-                <th>Docs Due from External</th>
-                <th>Docs Due to External</th>
-                <th>External to Local</th>
-              </tr>
-              <tr>
-                <td id="amlKycCompleteDateCell">XX XXX XXXX</td>
-                <td id="mchDoneDateCell">XX XXX XXXX</td>
-                <td id="docsDueFromSscDateCell">XX XXX XXXX</td>
-                <td id="docsDueToSscDateCell">XX XXX XXXX</td>
-                <td id="sscToLocalDateCell">XX XXX XXXX</td>
-              </tr>
-            </table>
+
+            <div id="datesArea">
+              <table>
+                <tr>
+                  <th class="datescol">AML/KYC Complete</th>
+                  <th class="datescol">System Add Done</th>
+                  <th class="datescol">Docs Due from External</th>
+                  <th class="datescol">Docs Due to External</th>
+                  <th class="datescol">External to Local</th>
+                </tr>
+                <tr>
+                  <td class="datescol" id="amlKycCompleteDateCell">
+                    XX XXX XXXX
+                  </td>
+                  <td class="datescol" id="mchDoneDateCell">XX XXX XXXX</td>
+                  <td class="datescol" id="docsDueFromSscDateCell">
+                    XX XXX XXXX
+                  </td>
+                  <td class="datescol" id="docsDueToSscDateCell">
+                    XX XXX XXXX
+                  </td>
+                  <td class="datescol" id="sscToLocalDateCell">XX XXX XXXX</td>
+                </tr>
+              </table>
+            </div>
+
             <button
               type="button"
               id="submitFundDetails"
               onclick="submitFundDetails()"
             >
-              Submit changes
+              Update Fund Details
             </button>
-            <button>Export to Excel</button><button>Print</button>
+            <button id="exportExcelBtn" class="btn btn-success">
+              Download as Excel</button
+            ><button id="exportCSVBtn" class="btn btn-success">
+              Download as CSV</button
+            ><button>Print</button>
           </div>
         </div>
 
@@ -61,18 +114,17 @@
           <div class="marketsAreaHeaderArea">
             <h2>Markets</h2>
           </div>
-
-          <!-- START DAY ONE MARKETS AREA -->
-          <div class="dayOneMarketsArea">
-            <h3>Day 1 Markets</h3>
-            <p>Could impact funding if not obtained</p>
-
+          <div class="addMarketsButtonsArea">
             <!-- START DAY ONE MODAL -->
-            <button data-modal-target="#modal">Add Day 1 Markets</button>
+            <button class="addMarketsButton" data-modal-target="#modal">
+              Update Day 1 Markets
+            </button>
             <div class="modal" id="modal">
               <div class="modal-header">
                 <div class="title">Select Day 1 Markets</div>
-                <button data-close-button class="close-button">&times;</button>
+                <button data-close-button class="close-button">
+                  &times;
+                </button>
               </div>
               <div class="modal-body">
                 <!-- <button>Update selected markets</button> -->
@@ -91,35 +143,18 @@
             <div id="overlay"></div>
             <!-- END DAY ONE MODAL -->
 
-            <!-- START NON DOCS DAY 1 -->
-            <h4>Day 1 Non Doc Markets</h4>
-            <div id="nonDocsDayOne"></div>
-            <table id="table1"></table>
-            <!-- END NON DOCS DAY 1 -->
-
-            <!-- START DOCS DAY 1 -->
-            <h4>Day 1 Doc Markets</h4>
-            <div id="docsDayOne"></div>
-            <table id="table2"></table>
-            <!-- END DOCS DAY 1 -->
-          </div>
-          <!-- END DAY ONE AREA -->
-
-          <!-- START REQUIRED ASAP AREA -->
-          <div class="asapMarketsArea">
-            <h3>Required ASAP Markets</h3>
-
             <!-- START REQUIRED ASAP MODAL -->
-            <button data-modal-target="#modal2">
-              Add Required ASAP Markets
+            <button class="addMarketsButton" data-modal-target="#modal2">
+              Update Required ASAP Markets
             </button>
             <div class="modal" id="modal2">
               <div class="modal-header">
                 <div class="title">Select Required ASAP Markets</div>
-                <button data-close-button class="close-button">&times;</button>
+                <button data-close-button class="close-button">
+                  &times;
+                </button>
               </div>
               <div class="modal-body">
-                <!-- <button>Update selected markets</button> -->
                 <form onsubmit="return false" id="marketsList2"></form>
               </div>
               <div class="modal-footer">
@@ -129,32 +164,54 @@
                   onclick="getCheckedAsapMarkets(); removeNonDocAsapMarketsTables(); removeDocAsapMarketsTables(); checkforAsapNonDoc(); checkforAsapDoc()"
                 >
                   Update Market Tables
-                  <!-- onclick="getCheckedDayOneMarkets(); removeNonDocDayOneMarketsTables(); removeDocDayOneMarketsTables(); checkforDayOneNonDoc(); checkforDayOneDoc()"
-                  Save Markets -->
                 </button>
-                <!-- ;removeAsapMarketsTables();checkforchecks2() -->
               </div>
             </div>
             <div id="overlay"></div>
             <!-- END REQUIRED ASAP MOAL -->
-
-            <!-- START NON DOC ASAP -->
-            <h4>Required - ASAP Non Doc Markets</h4>
-            <div id="nonDocAsap"></div>
-            <table id="table3"></table>
-            <!-- END NON DOC ASAP -->
-
-            <!-- START DOCS ASAP -->
-            <h4>Required - ASAP Doc Markets</h4>
-            <div id="docsAsap"></div>
-            <table id="table4"></table>
-            <!-- END DOCS ASAP -->
           </div>
-          <!-- END REQUIRED ASAP AREA -->
+          <div class="marketsTablesArea">
+            <!-- START DAY ONE MARKETS AREA -->
+            <div class="dayOneMarketsArea">
+              <h3>Day 1 Markets</h3>
+              <p>Could impact funding if not obtained</p>
+
+              <!-- START NON DOCS DAY 1 -->
+              <h4>Day 1 Non Doc Markets</h4>
+              <div id="nonDocsDayOne"></div>
+              <table id="table1"></table>
+              <!-- END NON DOCS DAY 1 -->
+
+              <!-- START DOCS DAY 1 -->
+              <h4>Day 1 Doc Markets</h4>
+              <div id="docsDayOne"></div>
+              <table id="table2"></table>
+              <!-- END DOCS DAY 1 -->
+            </div>
+            <!-- END DAY ONE AREA -->
+
+            <!-- START REQUIRED ASAP AREA -->
+            <div class="asapMarketsArea">
+              <h3>Required ASAP Markets</h3>
+
+              <!-- START NON DOC ASAP -->
+              <h4>Required - ASAP Non Doc Markets</h4>
+              <div id="nonDocAsap"></div>
+              <table id="table3"></table>
+              <!-- END NON DOC ASAP -->
+
+              <!-- START DOCS ASAP -->
+              <h4>Required - ASAP Doc Markets</h4>
+              <div id="docsAsap"></div>
+              <table id="table4"></table>
+              <!-- END DOCS ASAP -->
+            </div>
+            <!-- END REQUIRED ASAP AREA -->
+          </div>
         </div>
       </div>
-      <div class="header">
-        <h1>Fund Launch Markets Forecaster</h1>
+      <div class="footer">
+        <p>2020</p>
       </div>
     </div>
     <div id="overlay"></div>

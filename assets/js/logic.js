@@ -992,16 +992,16 @@ function getCheckedAsapMarkets() {
 
 /* START CHECK FOR DAY 1 NON DOC SELECTED. IF NONE SELECTED,DO NOT CREATE DAY 1 NON DOC TABLE OR REMOVE EXISTING DAY 1 NON DOC TABLE. IF ANY DAY 1 NON DOC IS YES, THEN CREATE OR UPDATE DAY ONE NON DOC TABLE */
 function checkDayOneNonDoc(requested) {
-  console.log("pork chops and apple sauce");
+  console.log("checking day one non doc");
   return requested["requestedDay1"] == "No";
 }
 function checkforDayOneNonDoc() {
   let result = marketsData.filter((market) => market["docMarket"] == "No");
   // console.log(result);
   if (result.every(checkDayOneNonDoc)) {
-    console.log("no markets requested");
+    console.log("no day one non doc markets requested");
   } else {
-    console.log("someone picked a market");
+    console.log("someone picked a day one non doc market");
     updateNonDocDayOneMarketTables();
   }
 }
@@ -1009,16 +1009,16 @@ function checkforDayOneNonDoc() {
 
 /* START CHECK FOR DAY 1 DOC SELECTED. IF NONE SELECTED,DO NOT CREATE DAY 1 NON DOC TABLE OR REMOVE EXISTING DAY 1 NON DOC TABLE. IF ANY DAY 1 NON DOC IS YES, THEN CREATE OR UPDATE DAY ONE NON DOC TABLE */
 function checkDayOneDoc(requested) {
-  console.log("meatloaf and mashed potatos");
+  console.log("checking day one doc markets");
   return requested["requestedDay1"] == "No";
 }
 function checkforDayOneDoc() {
   let result = marketsData.filter((market) => market["docMarket"] == "Yes");
   // console.log("result is: " + result);
   if (result.every(checkDayOneDoc)) {
-    console.log("no markets requested");
+    console.log("no day one doc markets requested");
   } else {
-    console.log("someone picked a market");
+    console.log("someone picked a day one doc market");
     updateDocDayOneMarketTables();
   }
 }
@@ -1026,16 +1026,16 @@ function checkforDayOneDoc() {
 
 /* START CHECK FOR ASAP NON DOC SELECTED. IF NONE SELECTED,DO NOT CREATE DAY 1 NON DOC TABLE OR REMOVE EXISTING DAY 1 NON DOC TABLE. IF ANY DAY 1 NON DOC IS YES, THEN CREATE OR UPDATE DAY ONE NON DOC TABLE */
 function checkAsapNonDoc(requested) {
-  console.log("meatloaf and mashed potatos");
+  console.log("checking asap non doc");
   return requested["requestedAsap"] == "No";
 }
 function checkforAsapNonDoc() {
   let result = marketsData.filter((market) => market["docMarket"] == "No");
   // console.log("result is: " + result);
   if (result.every(checkAsapNonDoc)) {
-    console.log("no markets requested");
+    console.log("no asap non doc markets requested");
   } else {
-    console.log("someone picked a market");
+    console.log("someone picked an asap non doc market");
     updateNonDocAsapMarketTables();
   }
 }
@@ -1043,16 +1043,16 @@ function checkforAsapNonDoc() {
 
 /* START CHECK FOR ASAP DOC SELECTED. IF NONE SELECTED,DO NOT CREATE DAY 1 NON DOC TABLE OR REMOVE EXISTING DAY 1 NON DOC TABLE. IF ANY DAY 1 NON DOC IS YES, THEN CREATE OR UPDATE DAY ONE NON DOC TABLE */
 function checkAsapDoc(requested) {
-  console.log("meatloaf and mashed potatos");
+  console.log("checking asap doc markets");
   return requested["requestedAsap"] == "No";
 }
 function checkforAsapDoc() {
   let result = marketsData.filter((market) => market["docMarket"] == "Yes");
   // console.log("result is: " + result);
   if (result.every(checkAsapDoc)) {
-    console.log("no markets requested");
+    console.log("no asap doc markets requested");
   } else {
-    console.log("someone picked a market");
+    console.log("someone picked an asap doc market");
     updateDocAsapMarketTables();
   }
 }
@@ -1060,14 +1060,14 @@ function checkforAsapDoc() {
 
 /*  START REMOVE NON DOC DAY 1 MARKETS TABLES */
 function removeNonDocDayOneMarketsTables() {
-  console.log("removing markets tables");
+  console.log("removing non doc day one markets tables");
   let elementExists = document.getElementById("table1header");
   console.log(elementExists);
   if (elementExists) {
     console.log("table1header exists");
     let elem = document.getElementById("table1header");
     elem.parentNode.removeChild(elem);
-    let elem1 = document.getElementById("tbodyid");
+    let elem1 = document.getElementById("t1bodyid");
     elem1.parentNode.removeChild(elem1);
   } else {
     console.log("table1header does not exist");
@@ -1077,14 +1077,14 @@ function removeNonDocDayOneMarketsTables() {
 
 /*  START REMOVE DOC DAY 1 MARKETS TABLES */
 function removeDocDayOneMarketsTables() {
-  console.log("removing markets tables");
+  console.log("removing doc day one markets tables");
   let elementExists = document.getElementById("table2header");
   console.log(elementExists);
   if (elementExists) {
     console.log("table2header exists");
     let elem = document.getElementById("table2header");
     elem.parentNode.removeChild(elem);
-    let elem1 = document.getElementById("tbodyid");
+    let elem1 = document.getElementById("t2bodyid");
     elem1.parentNode.removeChild(elem1);
   } else {
     console.log("table2header does not exist");
@@ -1094,14 +1094,14 @@ function removeDocDayOneMarketsTables() {
 
 /*  START REMOVE NON DOC ASAP MARKETS TABLES */
 function removeNonDocAsapMarketsTables() {
-  console.log("removing markets tables");
+  console.log("removing non doc asap markets tables");
   let elementExists = document.getElementById("table3header");
   console.log(elementExists);
   if (elementExists) {
     console.log("table3header exists");
     let elem = document.getElementById("table3header");
     elem.parentNode.removeChild(elem);
-    let elem1 = document.getElementById("tbodyid");
+    let elem1 = document.getElementById("t3bodyid");
     elem1.parentNode.removeChild(elem1);
   } else {
     console.log("table3header does not exist");
@@ -1111,14 +1111,14 @@ function removeNonDocAsapMarketsTables() {
 
 /*  START REMOVE DOC ASAP MARKETS TABLES */
 function removeDocAsapMarketsTables() {
-  console.log("removing markets tables");
+  console.log("removing doc asap markets tables");
   let elementExists = document.getElementById("table4header");
   console.log(elementExists);
   if (elementExists) {
     console.log("table4header exists");
     let elem = document.getElementById("table4header");
     elem.parentNode.removeChild(elem);
-    let elem1 = document.getElementById("tbodyid");
+    let elem1 = document.getElementById("t4bodyid");
     elem1.parentNode.removeChild(elem1);
   } else {
     console.log("table4header does not exist");
@@ -1128,8 +1128,7 @@ function removeDocAsapMarketsTables() {
 
 /* START CREATE NON DOC DAY 1 MARKETS TABLE */
 function updateNonDocDayOneMarketTables() {
-  console.log("Hola");
-  console.log("Red Red Wine");
+  console.log("updating non doc day 1 market tables");
   let table = document.querySelector("#table1");
   let data = ["name", "timeframeToOpen", "openDate"];
   console.log(data);
@@ -1137,7 +1136,7 @@ function updateNonDocDayOneMarketTables() {
   generateTableHead(table, data); // then the head
   let tbody = table.querySelector("tbody");
   tbody.classList.add("tbodyClass");
-  tbody.setAttribute("id", "tbodyid");
+  tbody.setAttribute("id", "t1bodyid");
 }
 
 // Creates the table header
@@ -1179,8 +1178,7 @@ function generateTable(table, data) {
 
 /* START CREATE DOC DAY 1 MARKETS TABLE */
 function updateDocDayOneMarketTables() {
-  console.log("Hola");
-  console.log("Red Red Wine");
+  console.log("updating doc day 1 market tables");
   let table = document.querySelector("#table2");
   let data = ["name", "timeframeToOpen", "openDate"];
   console.log(data);
@@ -1188,12 +1186,12 @@ function updateDocDayOneMarketTables() {
   generateTable2Head(table, data); // then the head
   let tbody = table.querySelector("tbody");
   tbody.classList.add("tbodyClass");
-  tbody.setAttribute("id", "tbodyid");
+  tbody.setAttribute("id", "t2bodyid");
 }
 
 // Creates the table header
 function generateTable2Head(table, data) {
-  console.log("generateTableHead is called");
+  console.log("generateTable2Head is running");
   let thead = table.createTHead();
   let row = thead.insertRow();
   thead.setAttribute("id", "table2header");
@@ -1203,12 +1201,12 @@ function generateTable2Head(table, data) {
     th.appendChild(text);
     row.appendChild(th);
   }
-  console.log("generateTableHead success");
+  console.log("generateTable2Head success");
 }
 
 // Creates the table body
 function generateTable2(table, data) {
-  console.log("generateTable is called");
+  console.log("generateTable2 is running");
   for (let element of data) {
     if (element["requestedDay1"] == "Yes" && element["docMarket"] == "Yes") {
       console.log("element: " + element["name"]);
@@ -1224,14 +1222,13 @@ function generateTable2(table, data) {
       cell3.appendChild(text3);
     }
   }
-  console.log("generateTable success");
+  console.log("generateTable2 success");
 }
 /* END CREATE DOC DAY 1 MARKETS TABLE */
 
 /* START CREATE NON DOC ASAP MARKETS TABLE */
 function updateNonDocAsapMarketTables() {
-  console.log("Hola");
-  console.log("Red Red Wine");
+  console.log("updating non doc asap market tables");
   let table = document.querySelector("#table3");
   let data = ["name", "timeframeToOpen", "openDate"];
   console.log(data);
@@ -1239,12 +1236,12 @@ function updateNonDocAsapMarketTables() {
   generateTable3Head(table, data); // then the head
   let tbody = table.querySelector("tbody");
   tbody.classList.add("tbodyClass");
-  tbody.setAttribute("id", "tbodyid");
+  tbody.setAttribute("id", "t3bodyid");
 }
 
 // Creates the table header
 function generateTable3Head(table, data) {
-  console.log("generateTableHead is called");
+  console.log("generateTable3Head is called");
   let thead = table.createTHead();
   let row = thead.insertRow();
   thead.setAttribute("id", "table3header");
@@ -1254,12 +1251,12 @@ function generateTable3Head(table, data) {
     th.appendChild(text);
     row.appendChild(th);
   }
-  console.log("generateTableHead success");
+  console.log("generateTable3Head success");
 }
 
 // Creates the table body
 function generateTable3(table, data) {
-  console.log("generateTable is called");
+  console.log("generateTable3 is running");
   for (let element of data) {
     if (element["requestedAsap"] == "Yes" && element["docMarket"] == "No") {
       console.log("element: " + element["name"]);
@@ -1275,14 +1272,13 @@ function generateTable3(table, data) {
       cell3.appendChild(text3);
     }
   }
-  console.log("generateTable success");
+  console.log("generateTable3 success");
 }
 /* END CREATE NON DOC ASAP MARKETS TABLE */
 
 /* START CREATE DOC ASAP MARKETS TABLE */
 function updateDocAsapMarketTables() {
-  console.log("Hola");
-  console.log("Red Red Wine");
+  console.log("updating doc asap markets");
   let table = document.querySelector("#table4");
   let data = ["name", "timeframeToOpen", "openDate"];
   console.log(data);
@@ -1290,12 +1286,12 @@ function updateDocAsapMarketTables() {
   generateTable4Head(table, data); // then the head
   let tbody = table.querySelector("tbody");
   tbody.classList.add("tbodyClass");
-  tbody.setAttribute("id", "tbodyid");
+  tbody.setAttribute("id", "t4bodyid");
 }
 
 // Creates the table header
 function generateTable4Head(table, data) {
-  console.log("generateTableHead is called");
+  console.log("generateTable4Head is running");
   let thead = table.createTHead();
   let row = thead.insertRow();
   thead.setAttribute("id", "table4header");
@@ -1305,12 +1301,12 @@ function generateTable4Head(table, data) {
     th.appendChild(text);
     row.appendChild(th);
   }
-  console.log("generateTableHead success");
+  console.log("generateTable4Head success");
 }
 
 // Creates the table body
 function generateTable4(table, data) {
-  console.log("generateTable is called");
+  console.log("generateTable4 is running");
   for (let element of data) {
     if (element["requestedAsap"] == "Yes" && element["docMarket"] == "Yes") {
       console.log("element: " + element["name"]);
@@ -1326,7 +1322,7 @@ function generateTable4(table, data) {
       cell3.appendChild(text3);
     }
   }
-  console.log("generateTable success");
+  console.log("generateTable4 success");
 }
 /* END CREATE DOC ASAP MARKETS TABLE */
 
@@ -1428,6 +1424,70 @@ function convertInDateToCompletionDate(numberOfBusinessDaysToAdd, beginDateIn) {
   return endDateOut;
 }
 /* END FUNCTION TO ADD X NUMBER OF BUSINESS DAYS TO A GIVEN DATE */
+
+/* START DOWNLOAD EXCEL AND CSV BUTTONS */
+let btnExportCSV = document.querySelector("#exportCSVBtn");
+let btnExportXLS = document.querySelector("#exportExcelBtn");
+const table1 = document.querySelector("#table1");
+const table2 = document.querySelector("#table2");
+const table3 = document.querySelector("#table3");
+const table4 = document.querySelector("#table4");
+const tables = document.querySelectorAll("tbody");
+// tables[0].appendChild(tables[1].querySelectorAll("tr"));
+btnExportCSV.onclick = function () {
+  console.log("Export in CSV");
+  exportCSV();
+};
+
+btnExportXLS.onclick = () => {
+  console.log("Export in Excel");
+  exportXLS();
+};
+
+function exportCSV() {
+  let csvContent = [];
+  for (let i = 0; i < marketsData.length; i++) {
+    if (
+      marketsData[i]["requestedDay1"] == "Yes" ||
+      marketsData[i]["requestedAsap"] == "Yes"
+    ) {
+      csvContent.push(
+        marketsData[i]["name"] + "," + launchDate + "," + fundName
+      );
+    }
+  }
+  csvContent = encodeURI(csvContent.join("\n"));
+  console.log(csvContent);
+
+  const csvContentUrl = "data:text/csv;charset=utf-8," + csvContent;
+
+  triggerDownload(csvContentUrl, "markets.csv");
+}
+
+function exportXLS() {
+  const table1Content = table1.outerHTML.replace(/ /g, "%20");
+  const table2Content = table2.outerHTML.replace(/ /g, "%20");
+  const table3Content = table3.outerHTML.replace(/ /g, "%20");
+  const table4Content = table4.outerHTML.replace(/ /g, "%20");
+  // console.log(tableContent);
+  const tableHTMLUrl =
+    "data:application/vnd.ms-excel;charset=utf-8," +
+    table1Content +
+    table2Content +
+    table3Content +
+    table4Content;
+  console.log(tableHTMLUrl);
+  triggerDownload(tableHTMLUrl, "markets.xls");
+}
+
+function triggerDownload(url, filename) {
+  const downloadLink = document.createElement("a");
+  downloadLink.href = url;
+  downloadLink.download = filename;
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+}
+/* END DOWNLOAD EXCEL AND CSV BUTTONS */
 
 // CHANGE THE BACKGROUND OF AN LI ELEMENT ONCLICK
 //market.classList.add("type");
