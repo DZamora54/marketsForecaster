@@ -1130,7 +1130,7 @@ function removeDocAsapMarketsTables() {
 function updateNonDocDayOneMarketTables() {
   console.log("updating non doc day 1 market tables");
   let table = document.querySelector("#table1");
-  let data = ["name", "timeframeToOpen", "openDate"];
+  let data = ["Market", "Days to Open", "Open Date"];
   console.log(data);
   generateTable(table, marketsData); // generate the table first
   generateTableHead(table, data); // then the head
@@ -1170,6 +1170,8 @@ function generateTable(table, data) {
       cell.appendChild(text);
       cell2.appendChild(text2);
       cell3.appendChild(text3);
+      cell3.setAttribute("class", "openDateCell");
+
     }
   }
   //console.log("generateTable success");
@@ -1180,7 +1182,7 @@ function generateTable(table, data) {
 function updateDocDayOneMarketTables() {
   console.log("updating doc day 1 market tables");
   let table = document.querySelector("#table2");
-  let data = ["name", "timeframeToOpen", "openDate"];
+  let data = ["Market", "Days to Open", "Open Date"];
   console.log(data);
   generateTable2(table, marketsData); // generate the table first
   generateTable2Head(table, data); // then the head
@@ -1220,6 +1222,8 @@ function generateTable2(table, data) {
       cell.appendChild(text);
       cell2.appendChild(text2);
       cell3.appendChild(text3);
+      cell3.setAttribute("class", "openDateCell");
+
     }
   }
   console.log("generateTable2 success");
@@ -1230,7 +1234,7 @@ function generateTable2(table, data) {
 function updateNonDocAsapMarketTables() {
   console.log("updating non doc asap market tables");
   let table = document.querySelector("#table3");
-  let data = ["name", "timeframeToOpen", "openDate"];
+  let data = ["Market", "Days to Open", "Open Date"];
   console.log(data);
   generateTable3(table, marketsData); // generate the table first
   generateTable3Head(table, data); // then the head
@@ -1270,6 +1274,8 @@ function generateTable3(table, data) {
       cell.appendChild(text);
       cell2.appendChild(text2);
       cell3.appendChild(text3);
+      cell3.setAttribute("class", "openDateCell");
+
     }
   }
   console.log("generateTable3 success");
@@ -1280,7 +1286,7 @@ function generateTable3(table, data) {
 function updateDocAsapMarketTables() {
   console.log("updating doc asap markets");
   let table = document.querySelector("#table4");
-  let data = ["name", "timeframeToOpen", "openDate"];
+  let data = ["Market", "Days to Open", "Open Date"];
   console.log(data);
   generateTable4(table, marketsData); // generate the table first
   generateTable4Head(table, data); // then the head
@@ -1320,6 +1326,7 @@ function generateTable4(table, data) {
       cell.appendChild(text);
       cell2.appendChild(text2);
       cell3.appendChild(text3);
+      cell3.setAttribute("class", "openDateCell");
     }
   }
   console.log("generateTable4 success");
@@ -1425,6 +1432,13 @@ function convertInDateToCompletionDate(numberOfBusinessDaysToAdd, beginDateIn) {
 }
 /* END FUNCTION TO ADD X NUMBER OF BUSINESS DAYS TO A GIVEN DATE */
 
+/* START CHANGE OPEN DATE COLOR BASED ON MARKET READINESS */
+function marketReadiness() {
+
+}
+/* END CHANGE OPEN DATE COLOR BASED ON MARKET READINESS */
+
+
 /* START DOWNLOAD EXCEL AND CSV BUTTONS */
 let btnExportCSV = document.querySelector("#exportCSVBtn");
 let btnExportXLS = document.querySelector("#exportExcelBtn");
@@ -1488,6 +1502,83 @@ function triggerDownload(url, filename) {
   downloadLink.click();
 }
 /* END DOWNLOAD EXCEL AND CSV BUTTONS */
+
+function setReadinessColors() {
+  let openDates = document.getElementsByClassName("openDateCell");
+  for(let i = 0; i < openDates.length; i++) {
+    if(compareDateStrings(openDates[i].innerHTML, launchDate) == "issues") {
+      openDates[i].style.backgroundColor = "red";
+    } else {
+      openDates[i].style.backgroundColor = "lime";
+    }
+ }}
+
+/* START CONVERT STRING DATES TO TIME */
+function compareDateStrings(openDateString, launchDateString) {
+// let arrivalDateString = "24 Sep 2020";
+// let startDateString = "2020-07-16";
+let openDateArgs = [];
+let launchDateArgs = [];
+let openDateYear = parseInt(openDateString.substr(7, 4));
+let openDateMonth = convertMonthStringToInt(openDateString.substr(3, 3));
+let openDateDay = parseInt(openDateString.substr(0, 2));
+let launchDateYear = parseInt(launchDateString.substr(0, 4));
+let launchDateMonth = parseInt(launchDateString.substr(5, 2));
+let launchDateDay = parseInt(launchDateString.substr(8, 2));
+
+openDateArgs[0] = openDateYear;
+openDateArgs[1] = openDateMonth;
+openDateArgs[2] = openDateDay;
+launchDateArgs[0] = launchDateYear;
+launchDateArgs[1] = launchDateMonth;
+launchDateArgs[2] = launchDateDay;
+
+let openDateObject = new Date(openDateArgs[0], openDateArgs[1], openDateArgs[2]);
+let launchDateObject = new Date(launchDateArgs[0], launchDateArgs[1], launchDateArgs[2]);
+let openTime = openDateObject.getTime();
+let launchTime = launchDateObject.getTime();
+
+if(openTime > launchTime) {
+  return "issues"
+} else {
+  return "noConcerns"
+}
+
+function convertMonthStringToInt(monthString) {
+  let monthInt;
+  if (monthString == "Jan") {
+    monthInt = 0;
+  } else if (monthString == "Feb") {
+    monthInt = 1;
+  } else if (monthString == "Mar") {
+    monthInt = 2;
+  } else if (monthString == "Apr") {
+    monthInt = 3;
+  } else if (monthString == "May") {
+    monthInt = 4;
+  } else if (monthString == "Jun") {
+    monthInt = 5;
+  } else if (monthString == "Jul") {
+    monthInt = 6;
+  } else if (monthString == "Aug") {
+    monthInt = 7;
+  } else if (monthString == "Sep") {
+    monthInt = 8;
+  } else if (monthString == "Oct") {
+    monthInt = 9;
+  } else if (monthString == "Nov") {
+    monthInt = 10;
+  } else if (monthString == "Dec") {
+    monthInt = 11;
+  }
+  // console.log(monthInt);
+  return monthInt+1;
+}
+}
+/* END CONVERT STRING DATES TO TIME */
+
+// document.onload = alert("Browsers other than Chrome are not supported")
+
 
 // CHANGE THE BACKGROUND OF AN LI ELEMENT ONCLICK
 //market.classList.add("type");

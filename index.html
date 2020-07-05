@@ -95,18 +95,23 @@
               </table>
             </div>
 
-            <button
+            <div id="fundButtonsArea">            <button class="blueButton"
               type="button"
               id="submitFundDetails"
               onclick="submitFundDetails()"
             >
               Update Fund Details
             </button>
-            <button id="exportExcelBtn" class="btn btn-success">
+            <button class="blueButton" id="exportExcelBtn" class="btn btn-success">
               Download as Excel</button
-            ><button id="exportCSVBtn" class="btn btn-success">
+            ><button class="blueButton" id="exportCSVBtn" class="btn btn-success">
               Download as CSV</button
-            ><button>Print</button>
+            >
+            <!-- <button class="blueButton">Print</button> -->
+</div>
+<div>
+  <p id="timeframeNote">Please note that market open dates are calculated using best estimates of timeframes to add funds at the bank once AML/KYC is submitted and timeframes to open markets once all documents are submitted to the local markets.</p>
+  </div>
           </div>
         </div>
 
@@ -116,7 +121,7 @@
           </div>
           <div class="addMarketsButtonsArea">
             <!-- START DAY ONE MODAL -->
-            <button class="addMarketsButton" data-modal-target="#modal">
+            <button class="blueButton" class="addMarketsButton" data-modal-target="#modal">
               Update Day 1 Markets
             </button>
             <div class="modal" id="modal">
@@ -131,12 +136,12 @@
                 <form onsubmit="return false" id="marketsList"></form>
               </div>
               <div class="modal-footer">
-                <button
+                <button class="blueButton"
                   type="button"
                   id="submitMarkets"
-                  onclick="getCheckedDayOneMarkets(); removeNonDocDayOneMarketsTables(); removeDocDayOneMarketsTables(); checkforDayOneNonDoc(); checkforDayOneDoc()"
+                  onclick="getCheckedDayOneMarkets(); removeNonDocDayOneMarketsTables(); removeDocDayOneMarketsTables(); checkforDayOneNonDoc(); checkforDayOneDoc(); setReadinessColors()"
                 >
-                  Save Markets
+                  Update Markets Tables
                 </button>
               </div>
             </div>
@@ -144,7 +149,7 @@
             <!-- END DAY ONE MODAL -->
 
             <!-- START REQUIRED ASAP MODAL -->
-            <button class="addMarketsButton" data-modal-target="#modal2">
+            <button class="blueButton" class="addMarketsButton" data-modal-target="#modal2">
               Update Required ASAP Markets
             </button>
             <div class="modal" id="modal2">
@@ -158,10 +163,10 @@
                 <form onsubmit="return false" id="marketsList2"></form>
               </div>
               <div class="modal-footer">
-                <button
+                <button class="blueButton"
                   type="button"
                   id="submitMarkets2"
-                  onclick="getCheckedAsapMarkets(); removeNonDocAsapMarketsTables(); removeDocAsapMarketsTables(); checkforAsapNonDoc(); checkforAsapDoc()"
+                  onclick="getCheckedAsapMarkets(); removeNonDocAsapMarketsTables(); removeDocAsapMarketsTables(); checkforAsapNonDoc(); checkforAsapDoc(); setReadinessColors()"
                 >
                   Update Market Tables
                 </button>
@@ -173,9 +178,9 @@
           <div class="marketsTablesArea">
             <!-- START DAY ONE MARKETS AREA -->
             <div class="dayOneMarketsArea">
-              <h3>Day 1 Markets</h3>
-              <p>Could impact funding if not obtained</p>
-
+              <h3 id="day1header">Day 1 Markets</h3>
+              <p id="day1tagline"> - Could impact funding if not obtained</p>
+            
               <!-- START NON DOCS DAY 1 -->
               <h4>Day 1 Non Doc Markets</h4>
               <div id="nonDocsDayOne"></div>
