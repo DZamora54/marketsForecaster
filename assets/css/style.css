@@ -321,7 +321,7 @@ input[type="radio"] {
 }
 
 #marketsList > div {
-  border-bottom: 1px solid black;
+  border-bottom: 1.5px solid #083680;
   padding-bottom: 15px;
 }
 
