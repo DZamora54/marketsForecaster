@@ -97,7 +97,6 @@
               </table>
             </div>
 
-<<<<<<< HEAD
             <div id="fundButtonsArea">
               <button
                 class="blueButton"
@@ -138,25 +137,6 @@
                 submitted to the local markets.
               </p>
             </div>
-=======
-            <div id="fundButtonsArea">            <button class="blueButton"
-              type="button"
-              id="submitFundDetails"
-              onclick="submitFundDetails()"
-            >
-              Update Fund Details
-            </button>
-            <button class="blueButton" id="exportExcelBtn" class="btn btn-success">
-              Download as Excel</button
-            ><button class="blueButton" id="exportCSVBtn" class="btn btn-success">
-              Download as CSV</button
-            >
-            <!-- <button class="blueButton">Print</button> -->
-</div>
-<div>
-  <p id="timeframeNote">Please note that market open dates are calculated using best estimates of timeframes to add funds at the bank once AML/KYC is submitted and timeframes to open markets once all documents are submitted to the local markets.</p>
-  </div>
->>>>>>> 942847a53406d65f73ee70286fc8cc4fd9b49b2f
           </div>
         </div>
 
@@ -166,17 +146,12 @@
           </div>
           <div class="addMarketsButtonsArea">
             <!-- START DAY ONE MODAL -->
-<<<<<<< HEAD
             <button
               class="blueButton"
               class="addMarketsButton"
               data-modal-target="#modal"
             >
               Add / Update Markets
-=======
-            <button class="blueButton" class="addMarketsButton" data-modal-target="#modal">
-              Update Day 1 Markets
->>>>>>> 942847a53406d65f73ee70286fc8cc4fd9b49b2f
             </button>
             <div class="modal" id="modal">
               <div class="modal-header">
@@ -190,19 +165,12 @@
                 <form onsubmit="return false" id="marketsList"></form>
               </div>
               <div class="modal-footer">
-<<<<<<< HEAD
                 <button
                   data-close-button
                   class="blueButton close-button"
                   type="button"
                   id="submitMarkets"
                   onclick="updateRequestedStatus(); removeNonDocDayOneMarketsTables(); removeDocDayOneMarketsTables(); checkforDayOneNonDoc(); checkforDayOneDoc();removeNonDocAsapMarketsTables(); removeDocAsapMarketsTables(); checkforAsapNonDoc(); checkforAsapDoc(); setReadinessColors()"
-=======
-                <button class="blueButton"
-                  type="button"
-                  id="submitMarkets"
-                  onclick="getCheckedDayOneMarkets(); removeNonDocDayOneMarketsTables(); removeDocDayOneMarketsTables(); checkforDayOneNonDoc(); checkforDayOneDoc(); setReadinessColors()"
->>>>>>> 942847a53406d65f73ee70286fc8cc4fd9b49b2f
                 >
                   Update Markets Tables
                 </button>
@@ -213,15 +181,11 @@
             <!-- END DAY ONE MODAL -->
 
             <!-- START REQUIRED ASAP MODAL -->
-<<<<<<< HEAD
             <!-- <button
               class="blueButton"
               class="addMarketsButton"
               data-modal-target="#modal2"
             >
-=======
-            <button class="blueButton" class="addMarketsButton" data-modal-target="#modal2">
->>>>>>> 942847a53406d65f73ee70286fc8cc4fd9b49b2f
               Update Required ASAP Markets
             </button>
             <div class="modal" id="modal2">
@@ -235,12 +199,8 @@
                 <form onsubmit="return false" id="marketsList2"></form>
               </div>
               <div class="modal-footer">
-<<<<<<< HEAD
                 <button
                   class="blueButton"
-=======
-                <button class="blueButton"
->>>>>>> 942847a53406d65f73ee70286fc8cc4fd9b49b2f
                   type="button"
                   id="submitMarkets2"
                   onclick="getCheckedAsapMarkets(); removeNonDocAsapMarketsTables(); removeDocAsapMarketsTables(); checkforAsapNonDoc(); checkforAsapDoc(); setReadinessColors()"
@@ -256,13 +216,8 @@
             <!-- START DAY ONE MARKETS AREA -->
             <div class="dayOneMarketsArea">
               <h3 id="day1header">Day 1 Markets</h3>
-<<<<<<< HEAD
               <p id="day1tagline">- Could impact funding if not obtained</p>
 
-=======
-              <p id="day1tagline"> - Could impact funding if not obtained</p>
-            
->>>>>>> 942847a53406d65f73ee70286fc8cc4fd9b49b2f
               <!-- START NON DOCS DAY 1 -->
               <!-- <h4>Day 1 Non Doc Markets</h4> -->
               <div id="nonDocsDayOne"></div>
