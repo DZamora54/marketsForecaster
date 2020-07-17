@@ -1036,8 +1036,19 @@ function populateMarketsToChooseFrom() {
     marketDiv.appendChild(radioNotRequired);
     marketDiv.appendChild(labelNotRequired);
   }
+  setRadioNotRequired();
 }
 /* END ADD MARKETS AND RADIO BUTTONS TO MODAL */
+
+/* START SET RADIO BUTTONS TO DEFAULT OF NOT REQUIRED */
+function setRadioNotRequired() {
+  for (let i = 0; i < marketsData.length; i++) {
+    let marketId = marketsData[i]["marketId"];
+    radiobtn = document.getElementById(`${marketId}RadioNotRequiredId`);
+    radiobtn.checked = true;
+  }
+}
+/* START SET RADIO BUTTONS TO DEFAULT OF NOT REQUIRED */
 
 /* START UPDATING MARKET REQUESTED STATUS BASED ON SELECTED RADIO BUTTON */
 function updateRequestedStatus() {

@@ -308,11 +308,11 @@ h4 {
 }
 
 #timeframeNote {
-  margin: 50px 20px 0px 5px;
+  margin: 10px 20px 0px 5px;
   padding: 5px;
   border: 1px solid black;
   border-radius: 5px;
-  background-color: lightyellow;
+  /* background-color: lightyellow; */
 }
 
 input[type="radio"] {
