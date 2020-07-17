@@ -1,6 +1,7 @@
 const marketsData = [
   {
     name: "Albania",
+    marketId: "albania",
     docMarket: "No",
     timeframeToOpen: 3,
     requestedDay1: "No",
@@ -9,6 +10,7 @@ const marketsData = [
   },
   {
     name: "Argentina",
+    marketId: "argentina",
     docMarket: "No",
     timeframeToOpen: 7,
     requestedDay1: "No",
@@ -17,6 +19,7 @@ const marketsData = [
   },
   {
     name: "Australia",
+    marketId: "australia",
     docMarket: "No",
     timeframeToOpen: 2,
     requestedDay1: "No",
@@ -25,6 +28,7 @@ const marketsData = [
   },
   {
     name: "Austria",
+    marketId: "austriaa",
     docMarket: "No",
     timeframeToOpen: 2,
     requestedDay1: "No",
@@ -33,494 +37,7 @@ const marketsData = [
   },
   {
     name: "Bahrain",
-    docMarket: "No",
-    timeframeToOpen: 5,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Belgium",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Bermuda",
-    docMarket: "No",
-    timeframeToOpen: 3,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Bosnia",
-    docMarket: "No",
-    timeframeToOpen: 4,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Botswana",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Bulgaria",
-    docMarket: "No",
-    timeframeToOpen: 3,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Canada",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Clearstream",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Costa Rica",
-    docMarket: "No",
-    timeframeToOpen: 4,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Croatia",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Cyprus",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Czech Republic",
-    docMarket: "No",
-    timeframeToOpen: 5,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Denmark",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Estonia",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Eswatini",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Euroclear",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Finland",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "France",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Georgia, Republic of",
-    docMarket: "No",
-    timeframeToOpen: 5,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Germany",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Ghana",
-    docMarket: "No",
-    timeframeToOpen: 5,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Hong Kong (HKD)",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Hungary",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Ireland",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Israel",
-    docMarket: "No",
-    timeframeToOpen: 3,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Italy",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Ivory Coast",
-    docMarket: "No",
-    timeframeToOpen: 5,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Japan",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Jordan",
-    docMarket: "No",
-    timeframeToOpen: 7,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Kazakhstan",
-    docMarket: "No",
-    timeframeToOpen: 35,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Kenya",
-    docMarket: "No",
-    timeframeToOpen: 3,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Kuwait",
-    docMarket: "No",
-    timeframeToOpen: 20,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Latvia",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Lithuania",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Luxembourg",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Malawi",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Mauritius",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Mexico",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Morocco",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Namibia",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Netherlands",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "New Zealand",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Nigeria",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Norway",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Oman",
-    docMarket: "No",
-    timeframeToOpen: 5,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Panama",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Philippines",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Poland",
-    docMarket: "No",
-    timeframeToOpen: 3,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Portugal",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Romania",
-    docMarket: "No",
-    timeframeToOpen: 7,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Singapore",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "South Africa",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Spain",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Sweden",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Switzerland",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Tanzania",
-    docMarket: "No",
-    timeframeToOpen: 5,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Tunisia",
-    docMarket: "No",
-    timeframeToOpen: 5,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Uganda",
-    docMarket: "No",
-    timeframeToOpen: 5,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Ukraine",
-    docMarket: "No",
-    timeframeToOpen: 14,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "United Kingdom",
-    docMarket: "No",
-    timeframeToOpen: 2,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "United States",
-    docMarket: "No",
-    timeframeToOpen: 1,
-    requestedDay1: "No",
-    requestedAsap: "No",
-    openDate: "MMM DD YYYY",
-  },
-  {
-    name: "Uruguay",
+    marketId: "bahrain",
     docMarket: "No",
     timeframeToOpen: 5,
     requestedDay1: "No",
@@ -529,6 +46,7 @@ const marketsData = [
   },
   {
     name: "Bangladesh",
+    marketId: "bangladesh",
     docMarket: "Yes",
     timeframeToOpen: 3,
     requestedDay1: "No",
@@ -536,7 +54,44 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Belgium",
+    marketId: "belgium",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Bermuda",
+    marketId: "bermuda",
+    docMarket: "No",
+    timeframeToOpen: 3,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Bosnia",
+    marketId: "bosnia",
+    docMarket: "No",
+    timeframeToOpen: 4,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Botswana",
+    marketId: "botswana",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Brazil",
+    marketId: "brazil",
     docMarket: "Yes",
     timeframeToOpen: 5,
     requestedDay1: "No",
@@ -544,7 +99,26 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Bulgaria",
+    marketId: "bulgaria",
+    docMarket: "No",
+    timeframeToOpen: 3,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Canada",
+    marketId: "canada",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Chile",
+    marketId: "chile",
     docMarket: "Yes",
     timeframeToOpen: 3,
     requestedDay1: "No",
@@ -553,6 +127,7 @@ const marketsData = [
   },
   {
     name: "China Connect",
+    marketId: "chinaConnect",
     docMarket: "Yes",
     timeframeToOpen: 20,
     requestedDay1: "No",
@@ -561,6 +136,7 @@ const marketsData = [
   },
   {
     name: "China Interbank Bond Connect (CIBM)",
+    marketId: "chinaBondConnect",
     docMarket: "Yes",
     timeframeToOpen: 35,
     requestedDay1: "No",
@@ -569,6 +145,7 @@ const marketsData = [
   },
   {
     name: "China A-share",
+    marketId: "chinaA",
     docMarket: "180",
     timeframeToOpen: 180,
     requestedDay1: "No",
@@ -577,6 +154,7 @@ const marketsData = [
   },
   {
     name: "China B-share Shanghai",
+    marketId: "chinaBShanghai",
     docMarket: "Yes",
     timeframeToOpen: 2,
     requestedDay1: "No",
@@ -585,7 +163,17 @@ const marketsData = [
   },
   {
     name: "China B-share Shenzhen",
+    marketId: "chinaBShenzhen",
     docMarket: "Yes",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Clearstream",
+    marketId: "clearstream",
+    docMarket: "No",
     timeframeToOpen: 2,
     requestedDay1: "No",
     requestedAsap: "No",
@@ -593,6 +181,7 @@ const marketsData = [
   },
   {
     name: "Colombia",
+    marketId: "colombia",
     docMarket: "Yes",
     timeframeToOpen: 12,
     requestedDay1: "No",
@@ -600,7 +189,53 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Costa Rica",
+    marketId: "costaRica",
+    docMarket: "No",
+    timeframeToOpen: 4,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Croatia",
+    marketId: "croatia",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Cyprus",
+    marketId: "cyprus",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Czech Republic",
+    marketId: "czechRepublic",
+    docMarket: "No",
+    timeframeToOpen: 5,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Denmark",
+    marketId: "denmark",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Egypt",
+    marketId: "egypt",
     docMarket: "Yes",
     timeframeToOpen: 6,
     requestedDay1: "No",
@@ -608,8 +243,90 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Estonia",
+    marketId: "estonia",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Eswatini",
+    marketId: "eswatini",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Euroclear",
+    marketId: "euroclear",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Finland",
+    marketId: "finland",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "France",
+    marketId: "france",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Georgia, Republic of",
+    marketId: "georgia",
+    docMarket: "No",
+    timeframeToOpen: 5,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Germany",
+    marketId: "germany",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Ghana",
+    marketId: "ghana",
+    docMarket: "No",
+    timeframeToOpen: 5,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Greece",
+    marketId: "greece",
     docMarket: "Yes",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Hong Kong (HKD)",
+    marketId: "hongKongHkd",
+    docMarket: "No",
     timeframeToOpen: 2,
     requestedDay1: "No",
     requestedAsap: "No",
@@ -617,7 +334,17 @@ const marketsData = [
   },
   {
     name: "Hong Kong (CNY)",
+    marketId: "hongKongCny",
     docMarket: "Yes",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Hungary",
+    marketId: "hungary",
+    docMarket: "No",
     timeframeToOpen: 2,
     requestedDay1: "No",
     requestedAsap: "No",
@@ -625,6 +352,7 @@ const marketsData = [
   },
   {
     name: "Iceland",
+    marketId: "iceland",
     docMarket: "Yes",
     timeframeToOpen: 2,
     requestedDay1: "No",
@@ -632,7 +360,17 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "India - FDI",
+    marketId: "indiaFpi",
+    docMarket: "Yes",
+    timeframeToOpen: 60,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "India - FPI",
+    marketId: "indiaFpi",
     docMarket: "Yes",
     timeframeToOpen: 40,
     requestedDay1: "No",
@@ -641,6 +379,7 @@ const marketsData = [
   },
   {
     name: "Indonesia",
+    marketId: "indonesia",
     docMarket: "Yes",
     timeframeToOpen: 7,
     requestedDay1: "No",
@@ -648,7 +387,53 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Ireland",
+    marketId: "ireland",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Israel",
+    marketId: "israel",
+    docMarket: "No",
+    timeframeToOpen: 3,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Italy",
+    marketId: "italy",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Ivory Coast",
+    marketId: "ivoryCoast",
+    docMarket: "No",
+    timeframeToOpen: 5,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Japan",
+    marketId: "japan",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Japan JGB",
+    marketId: "japanJgb",
     docMarket: "Yes",
     timeframeToOpen: 5,
     requestedDay1: "No",
@@ -656,7 +441,35 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Jordan",
+    marketId: "jordan",
+    docMarket: "No",
+    timeframeToOpen: 7,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Kazakhstan",
+    marketId: "kazakhstan",
+    docMarket: "No",
+    timeframeToOpen: 35,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Kenya",
+    marketId: "kenya",
+    docMarket: "No",
+    timeframeToOpen: 3,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Korea",
+    marketId: "korea",
     docMarket: "Yes",
     timeframeToOpen: 7,
     requestedDay1: "No",
@@ -664,15 +477,152 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
-    name: "Malaysia",
+    name: "Kuwait",
+    marketId: "kuwait",
+    docMarket: "No",
+    timeframeToOpen: 20,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Latvia",
+    marketId: "latvia",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Lithuania",
+    marketId: "lithuania",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Luxembourg",
+    marketId: "luxembourg",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Malawi",
+    marketId: "malawi",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Malaysia-Local",
+    marketId: "malaysiaLocal",
     docMarket: "Yes",
     timeframeToOpen: 7,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Malaysia-RENTAS",
+    marketId: "malaysiaRentas",
+    docMarket: "No",
+    timeframeToOpen: 8,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Mauritius",
+    marketId: "mauritius",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Mexico",
+    marketId: "mexico",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Morocco",
+    marketId: "morocco",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Namibia",
+    marketId: "namibia",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Netherlands",
+    marketId: "netherlands",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "New Zealand",
+    marketId: "newZealand",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Nigeria",
+    marketId: "nigeria",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Norway",
+    marketId: "norway",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Oman",
+    marketId: "oman",
+    docMarket: "No",
+    timeframeToOpen: 5,
     requestedDay1: "No",
     requestedAsap: "No",
     openDate: "MMM DD YYYY",
   },
   {
     name: "Pakistan",
+    marketId: "pakistan",
     docMarket: "Yes",
     timeframeToOpen: 21,
     requestedDay1: "No",
@@ -680,7 +630,17 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Panama",
+    marketId: "panama",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Peru",
+    marketId: "peru",
     docMarket: "Yes",
     timeframeToOpen: 7,
     requestedDay1: "No",
@@ -688,7 +648,35 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Philippines",
+    marketId: "philippines",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Poland",
+    marketId: "poland",
+    docMarket: "No",
+    timeframeToOpen: 3,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Portugal",
+    marketId: "portugal",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Qatar",
+    marketId: "qatar",
     docMarket: "Yes",
     timeframeToOpen: 10,
     requestedDay1: "No",
@@ -696,7 +684,17 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Romania",
+    marketId: "romania",
+    docMarket: "No",
+    timeframeToOpen: 7,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Russia",
+    marketId: "russia",
     docMarket: "Yes",
     timeframeToOpen: 10,
     requestedDay1: "No",
@@ -705,6 +703,7 @@ const marketsData = [
   },
   {
     name: "Saudi Arabia",
+    marketId: "saudiArabia",
     docMarket: "Yes",
     timeframeToOpen: 8,
     requestedDay1: "No",
@@ -713,6 +712,7 @@ const marketsData = [
   },
   {
     name: "Serbia",
+    marketId: "serbia",
     docMarket: "Yes",
     timeframeToOpen: 7,
     requestedDay1: "No",
@@ -720,7 +720,17 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Singapore",
+    marketId: "singapore",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Slovak Republic",
+    marketId: "slovakRepublic",
     docMarket: "Yes",
     timeframeToOpen: 4,
     requestedDay1: "No",
@@ -729,6 +739,7 @@ const marketsData = [
   },
   {
     name: "Slovenia",
+    marketId: "slovenia",
     docMarket: "Yes",
     timeframeToOpen: 4,
     requestedDay1: "No",
@@ -736,7 +747,26 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "South Africa",
+    marketId: "southAfrica",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Spain",
+    marketId: "spain",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Sri Lanka",
+    marketId: "sriLanka",
     docMarket: "Yes",
     timeframeToOpen: 45,
     requestedDay1: "No",
@@ -745,6 +775,7 @@ const marketsData = [
   },
   {
     name: "Srpska",
+    marketId: "srpska",
     docMarket: "Yes",
     timeframeToOpen: 4,
     requestedDay1: "No",
@@ -752,7 +783,26 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Sweden",
+    marketId: "sweden",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Switzerland",
+    marketId: "switzerland",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Taiwan",
+    marketId: "taiwan",
     docMarket: "Yes",
     timeframeToOpen: 10,
     requestedDay1: "No",
@@ -760,7 +810,17 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Tanzania",
+    marketId: "tanzania",
+    docMarket: "No",
+    timeframeToOpen: 5,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Thailand",
+    marketId: "thailand",
     docMarket: "Yes",
     timeframeToOpen: 2,
     requestedDay1: "No",
@@ -768,7 +828,17 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Tunisia",
+    marketId: "tunisia",
+    docMarket: "No",
+    timeframeToOpen: 5,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Turkey",
+    marketId: "turkey",
     docMarket: "Yes",
     timeframeToOpen: 10,
     requestedDay1: "No",
@@ -776,7 +846,26 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "Uganda",
+    marketId: "uganda",
+    docMarket: "No",
+    timeframeToOpen: 5,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Ukraine",
+    marketId: "ukraine",
+    docMarket: "No",
+    timeframeToOpen: 14,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "United Arab Emirates / Abu Dhabi Exchange (ADX)",
+    marketId: "uaeAdx",
     docMarket: "Yes",
     timeframeToOpen: 12,
     requestedDay1: "No",
@@ -785,6 +874,7 @@ const marketsData = [
   },
   {
     name: "United Arab Emirates / Dubai Financial Market (DFM)",
+    marketId: "uaeDfm",
     docMarket: "Yes",
     timeframeToOpen: 7,
     requestedDay1: "No",
@@ -793,6 +883,7 @@ const marketsData = [
   },
   {
     name: "United Arab Emirates / Dubai Int'l Financial Center (DIFC)",
+    marketId: "uaeDifc",
     docMarket: "Yes",
     timeframeToOpen: 7,
     requestedDay1: "No",
@@ -800,7 +891,35 @@ const marketsData = [
     openDate: "MMM DD YYYY",
   },
   {
+    name: "United Kingdom",
+    marketId: "unitedKingdom",
+    docMarket: "No",
+    timeframeToOpen: 2,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "United States",
+    marketId: "unitedStates",
+    docMarket: "No",
+    timeframeToOpen: 1,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
+    name: "Uruguay",
+    marketId: "uruguay",
+    docMarket: "No",
+    timeframeToOpen: 5,
+    requestedDay1: "No",
+    requestedAsap: "No",
+    openDate: "MMM DD YYYY",
+  },
+  {
     name: "Vietnam",
+    marketId: "vietnam",
     docMarket: "Yes",
     timeframeToOpen: 45,
     requestedDay1: "No",
@@ -812,19 +931,19 @@ const marketsData = [
 let launchDate;
 let amlKycSubmitDate;
 let amlKycCompleteDateTimeframe = 15;
-let mchDateTimeframe = 10;
-let docsFromSSBTimeframe = 7;
-let docsToSSBTimeframe = 7;
+let systemAddDateTimeframe = 10;
+let docsFromExternalTimeframe = 7;
+let docsToExternalTimeframe = 7;
 let docsToLocalTimeframe = 2;
 
 let fundName;
-let wmcId;
-let ssbId;
+let internalId;
+let externalId;
 
 let amlKycCompleteDate;
-let mchDoneDate;
-let docsDueFromSSBDate;
-let docsToSSBDate;
+let systemAddDoneDate;
+let docsDueFromExternalDate;
+let docsToExternalDate;
 let docsToLocalDate;
 
 /* START MODAL OPENING AND CLOSING */
@@ -866,129 +985,90 @@ function closeModal(modal) {
 }
 /* END MODAL OPENING AND CLOSING */
 
-/* START ADD DAY 1 MARKETS CHECKBOXES TO MODAL */
-// On load calls populateDayOneMarketsToChooseFrom function
+/* START ADD MARKETS AND RADIO BUTTONS TO MODAL */
+// On load calls populateMarketsToChooseFrom function
 window.addEventListener("load", function () {
-  this.populateDayOneMarketsToChooseFrom();
+  this.populateMarketsToChooseFrom();
 });
 
 // Populate market list from marketsData
-function populateDayOneMarketsToChooseFrom() {
+function populateMarketsToChooseFrom() {
   for (let i = 0; i < marketsData.length; i++) {
+    let market = marketsData[i]["marketId"];
     let markets = document.getElementById("marketsList");
-    let checkboxDiv = document.createElement("div");
-    let checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.name = "name";
-    checkbox.value = marketsData[i].name;
-    checkbox.id = "dayOneCheckboxId";
+    let marketDiv = document.createElement("div");
+    let marketName = document.createElement("p");
+    marketName.appendChild(
+      document.createTextNode(marketsData[i]["name"] + ":")
+    );
+    let radioDayOne = document.createElement("input");
+    radioDayOne.type = "radio";
+    radioDayOne.name = market;
+    radioDayOne.value = "Day One";
+    radioDayOne.id = `${market}RadioDayOneId`;
+    let radioAsap = document.createElement("input");
+    radioAsap.type = "radio";
+    radioAsap.name = market;
+    radioAsap.value = "ASAP";
+    radioAsap.id = `${market}RadioAsapId`;
+    let radioNotRequired = document.createElement("input");
+    radioNotRequired.type = "radio";
+    radioNotRequired.name = market;
+    radioNotRequired.value = "Not Required";
+    radioNotRequired.id = `${market}RadioNotRequiredId`;
 
-    let label = document.createElement("label");
-    label.htmlFor = "dayOneCheckboxId";
-    label.appendChild(document.createTextNode(marketsData[i].name));
+    let labelDayOne = document.createElement("label");
+    labelDayOne.htmlFor = `${market}RadioDayOneId`;
+    labelDayOne.appendChild(document.createTextNode("Day One"));
+    let labelAsap = document.createElement("label");
+    labelAsap.htmlFor = `${market}RadioAsapId`;
+    labelAsap.appendChild(document.createTextNode("ASAP"));
+    let labelNotRequired = document.createElement("label");
+    labelNotRequired.htmlFor = `${market}RSadioNotRequiredId`;
+    labelNotRequired.appendChild(document.createTextNode("Not Required"));
 
-    markets.appendChild(checkboxDiv);
-    checkboxDiv.appendChild(checkbox);
-    checkboxDiv.appendChild(label);
+    markets.appendChild(marketDiv);
+    marketDiv.appendChild(marketName);
+    marketDiv.appendChild(radioDayOne);
+    marketDiv.appendChild(labelDayOne);
+    marketDiv.appendChild(radioAsap);
+    marketDiv.appendChild(labelAsap);
+    marketDiv.appendChild(radioNotRequired);
+    marketDiv.appendChild(labelNotRequired);
   }
 }
-/* END ADD DAY 1 MARKETS CHECKBOXES TO MODAL */
+/* END ADD MARKETS AND RADIO BUTTONS TO MODAL */
 
-/* START ADD REQUIRED ASAP MARKETS CHECKBOXES TO MODAL */
-// On load calls populateRequiredAsapMarketsToChooseFrom function
-window.addEventListener("load", function () {
-  this.populateRequiredAsapMarketsToChooseFrom();
-});
-
-// Populate market list from marketsData
-function populateRequiredAsapMarketsToChooseFrom() {
+/* START UPDATING MARKET REQUESTED STATUS BASED ON SELECTED RADIO BUTTON */
+function updateRequestedStatus() {
+  console.log("updating requested status");
   for (let i = 0; i < marketsData.length; i++) {
-    let asapMarkets = document.getElementById("marketsList2");
-    let asapCheckboxDiv = document.createElement("div");
-    let asapCheckbox = document.createElement("input");
-    asapCheckbox.type = "checkbox";
-    asapCheckbox.name = "asapName";
-    asapCheckbox.value = marketsData[i].name;
-    asapCheckbox.id = "asapCheckboxId";
-    let asapLabel = document.createElement("label");
-    asapLabel.htmlFor = "asapCheckboxId";
-    asapLabel.appendChild(document.createTextNode(marketsData[i].name));
-    asapMarkets.appendChild(asapCheckboxDiv);
-    asapCheckboxDiv.appendChild(asapCheckbox);
-    asapCheckboxDiv.appendChild(asapLabel);
-  }
-}
-/* END ADD REQUIRED ASAP MARKETS CHECKBOXES TO MODAL */
-
-/* START UPDATE DAY ONE MARKETS REQUESTED KEY DEPENDING ON CHECKED BOOLEAN AND REQUESTED STATUS */
-// updates the marketsData requestedDay1 key to be "Yes" or "No" depending if the checkbox is checked or not checked
-function getCheckedDayOneMarkets() {
-  console.log("hello day 1");
-  let checkboxes = document.getElementsByName("name");
-  for (var checkbox of checkboxes) {
-    for (let i = 0; i < marketsData.length; i++) {
-      if (marketsData[i]["requestedAsap"] == "Yes - ASAP") {
-        document.getElementById("dayOneCheckboxId").disabled = true;
-      }
-    }
-    if (checkbox.checked) {
-      let temp = checkbox.value;
-      console.log("temp is " + checkbox.value);
-      for (let i = 0; i < marketsData.length; i++) {
-        if (marketsData[i]["name"] === checkbox.value && checkbox.checked) {
-          console.log(checkbox.value + " has been selected.");
-          marketsData[i]["requestedDay1"] = "Yes";
-        }
-      }
-    }
-    if (checkbox.checked == false) {
-      for (let i = 0; i < marketsData.length; i++) {
-        if (
-          marketsData[i]["name"] === checkbox.value &&
-          checkbox.checked == false
-        ) {
-          marketsData[i]["requestedDay1"] = "No";
-        }
-      }
+    console.log("looping through markets");
+    let marketId = marketsData[i]["marketId"];
+    // let
+    // console.log(`${marketId}RadioDayOne`);
+    if (document.getElementById(`${marketId}RadioDayOneId`).checked) {
+      console.log("radio day one is checked");
+      marketsData[i]["requestedAsap"] = "No";
+      marketsData[i]["requestedDay1"] = "Yes";
+    } else if (document.getElementById(`${marketId}RadioAsapId`).checked) {
+      console.log("asap is checked");
+      marketsData[i]["requestedAsap"] = "Yes";
+      marketsData[i]["requestedDay1"] = "No";
+    } else if (
+      document.getElementById(`${marketId}RadioNotRequiredId`).checked
+    ) {
+      console.log("not required");
+      marketsData[i]["requestedDay1"] = "No";
+      marketsData[i]["requestedAsap"] = "No";
+    } else {
+      console.log("nothing is checked");
+      marketsData[i]["requestedDay1"] = "No";
+      marketsData[i]["requestedAsap"] = "No";
     }
   }
 }
-/* END UPDATE DAY ONE MARKETS REQUESTED KEY DEPENDING ON CHECKED BOOLEAN AND REQUESTED STATUS */
-
-/* START UPDATE ASAP MARKETS REQUESTED KEY DEPENDING ON CHECKED BOOLEAN AND REQUESTED STATUS */
-// updates the marketsData requested key to be "Yes" or "No" depending if the checkbox is checked or not checked
-function getCheckedAsapMarkets() {
-  console.log("hello asap");
-  let checkboxes = document.getElementsByName("asapName");
-  for (var checkbox of checkboxes) {
-    for (let i = 0; i < marketsData.length; i++) {
-      if (marketsData[i]["requestedDay1"] == "Yes") {
-        document.getElementById("asapCheckboxId").disabled = true;
-      }
-    }
-    if (checkbox.checked) {
-      let temp = checkbox.value;
-      console.log("temp is " + checkbox.value);
-      for (let i = 0; i < marketsData.length; i++) {
-        if (marketsData[i]["name"] === checkbox.value && checkbox.checked) {
-          console.log(checkbox.value + " has been selected.");
-          marketsData[i]["requestedAsap"] = "Yes";
-        }
-      }
-    }
-    if (checkbox.checked == false) {
-      for (let i = 0; i < marketsData.length; i++) {
-        if (
-          marketsData[i]["name"] === checkbox.value &&
-          checkbox.checked == false
-        ) {
-          marketsData[i]["requestedAsap"] = "No";
-        }
-      }
-    }
-  }
-}
-/* END UPDATE ASAP MARKETS REQUESTED KEY DEPENDING ON CHECKED BOOLEAN AND REQUESTED STATUS */
+/* END UPDATING MARKET REQUESTED STATUS BASED ON SELECTED RADIO BUTTON */
 
 /* START CHECK FOR DAY 1 NON DOC SELECTED. IF NONE SELECTED,DO NOT CREATE DAY 1 NON DOC TABLE OR REMOVE EXISTING DAY 1 NON DOC TABLE. IF ANY DAY 1 NON DOC IS YES, THEN CREATE OR UPDATE DAY ONE NON DOC TABLE */
 function checkDayOneNonDoc(requested) {
@@ -1130,7 +1210,7 @@ function removeDocAsapMarketsTables() {
 function updateNonDocDayOneMarketTables() {
   console.log("updating non doc day 1 market tables");
   let table = document.querySelector("#table1");
-  let data = ["name", "timeframeToOpen", "openDate"];
+  let data = ["Day One Non Doc Markets", "Days to Open", "Open Date"];
   console.log(data);
   generateTable(table, marketsData); // generate the table first
   generateTableHead(table, data); // then the head
@@ -1170,6 +1250,7 @@ function generateTable(table, data) {
       cell.appendChild(text);
       cell2.appendChild(text2);
       cell3.appendChild(text3);
+      cell3.setAttribute("class", "openDateCell");
     }
   }
   //console.log("generateTable success");
@@ -1180,7 +1261,7 @@ function generateTable(table, data) {
 function updateDocDayOneMarketTables() {
   console.log("updating doc day 1 market tables");
   let table = document.querySelector("#table2");
-  let data = ["name", "timeframeToOpen", "openDate"];
+  let data = ["Day One Doc Markets", "Days to Open", "Open Date"];
   console.log(data);
   generateTable2(table, marketsData); // generate the table first
   generateTable2Head(table, data); // then the head
@@ -1220,6 +1301,7 @@ function generateTable2(table, data) {
       cell.appendChild(text);
       cell2.appendChild(text2);
       cell3.appendChild(text3);
+      cell3.setAttribute("class", "openDateCell");
     }
   }
   console.log("generateTable2 success");
@@ -1230,7 +1312,7 @@ function generateTable2(table, data) {
 function updateNonDocAsapMarketTables() {
   console.log("updating non doc asap market tables");
   let table = document.querySelector("#table3");
-  let data = ["name", "timeframeToOpen", "openDate"];
+  let data = ["ASAP Non Doc Markets", "Days to Open", "Open Date"];
   console.log(data);
   generateTable3(table, marketsData); // generate the table first
   generateTable3Head(table, data); // then the head
@@ -1270,6 +1352,7 @@ function generateTable3(table, data) {
       cell.appendChild(text);
       cell2.appendChild(text2);
       cell3.appendChild(text3);
+      cell3.setAttribute("class", "openDateCell");
     }
   }
   console.log("generateTable3 success");
@@ -1280,7 +1363,7 @@ function generateTable3(table, data) {
 function updateDocAsapMarketTables() {
   console.log("updating doc asap markets");
   let table = document.querySelector("#table4");
-  let data = ["name", "timeframeToOpen", "openDate"];
+  let data = ["ASAP Doc Markets", "Days to Open", "Open Date"];
   console.log(data);
   generateTable4(table, marketsData); // generate the table first
   generateTable4Head(table, data); // then the head
@@ -1320,6 +1403,7 @@ function generateTable4(table, data) {
       cell.appendChild(text);
       cell2.appendChild(text2);
       cell3.appendChild(text3);
+      cell3.setAttribute("class", "openDateCell");
     }
   }
   console.log("generateTable4 success");
@@ -1330,8 +1414,8 @@ function generateTable4(table, data) {
 function submitFundDetails() {
   console.log("submitting fund details");
   fundName = document.getElementById("fname").value;
-  wmcId = document.getElementById("wmcid").value;
-  ssbId = document.getElementById("ssbid").value;
+  internalId = document.getElementById("internalId").value;
+  externalId = document.getElementById("externalId").value;
   launchDate = document.getElementById("launchdate").value;
   amlKycSubmitDate = document.getElementById("amldate").value;
   updateOpenDate();
@@ -1346,9 +1430,9 @@ function updateOpenDate() {
     console.log(marketsData[i]["timeframeToOpen"]);
     let totalTimeToOpen =
       amlKycCompleteDateTimeframe +
-      mchDateTimeframe +
-      docsFromSSBTimeframe +
-      docsToSSBTimeframe +
+      systemAddDateTimeframe +
+      docsFromExternalTimeframe +
+      docsToExternalTimeframe +
       docsToLocalTimeframe +
       marketsData[i]["timeframeToOpen"];
     console.log(totalTimeToOpen);
@@ -1368,31 +1452,35 @@ function updateSlaDates() {
     amlKycCompleteDateTimeframe,
     amlKycSubmitDate
   );
-  mchDoneDate = convertInDateToCompletionDate(
-    mchDateTimeframe,
+  systemAddDoneDate = convertInDateToCompletionDate(
+    systemAddDateTimeframe,
     amlKycCompleteDate
   );
-  docsDueFromSSBDate = convertInDateToCompletionDate(
-    docsFromSSBTimeframe,
-    mchDoneDate
+  docsDueFromExternalDate = convertInDateToCompletionDate(
+    docsFromExternalTimeframe,
+    systemAddDoneDate
   );
-  docsToSSBDate = convertInDateToCompletionDate(
-    docsToSSBTimeframe,
-    docsDueFromSSBDate
+  docsToExternalDate = convertInDateToCompletionDate(
+    docsToExternalTimeframe,
+    docsDueFromExternalDate
   );
   docsToLocalDate = convertInDateToCompletionDate(
     docsToLocalTimeframe,
-    docsToSSBDate
+    docsToExternalDate
   );
 
   document.getElementById(
     "amlKycCompleteDateCell"
   ).innerHTML = amlKycCompleteDate;
-  document.getElementById("mchDoneDateCell").innerHTML = mchDoneDate;
+  document.getElementById(
+    "systemAddDoneDateCell"
+  ).innerHTML = systemAddDoneDate;
   document.getElementById(
     "docsDueFromSscDateCell"
-  ).innerHTML = docsDueFromSSBDate;
-  document.getElementById("docsDueToSscDateCell").innerHTML = docsToSSBDate;
+  ).innerHTML = docsDueFromExternalDate;
+  document.getElementById(
+    "docsDueToSscDateCell"
+  ).innerHTML = docsToExternalDate;
   document.getElementById("sscToLocalDateCell").innerHTML = docsToLocalDate;
 }
 /* END UPDATE SLA DATES */
@@ -1425,6 +1513,10 @@ function convertInDateToCompletionDate(numberOfBusinessDaysToAdd, beginDateIn) {
 }
 /* END FUNCTION TO ADD X NUMBER OF BUSINESS DAYS TO A GIVEN DATE */
 
+/* START CHANGE OPEN DATE COLOR BASED ON MARKET READINESS */
+function marketReadiness() {}
+/* END CHANGE OPEN DATE COLOR BASED ON MARKET READINESS */
+
 /* START DOWNLOAD EXCEL AND CSV BUTTONS */
 let btnExportCSV = document.querySelector("#exportCSVBtn");
 let btnExportXLS = document.querySelector("#exportExcelBtn");
@@ -1452,7 +1544,7 @@ function exportCSV() {
       marketsData[i]["requestedAsap"] == "Yes"
     ) {
       csvContent.push(
-        marketsData[i]["name"] + "," + launchDate + "," + fundName
+        marketsData[i]["name"] + "," + markets[i]["openDate"] + "," + fundName
       );
     }
   }
@@ -1488,6 +1580,91 @@ function triggerDownload(url, filename) {
   downloadLink.click();
 }
 /* END DOWNLOAD EXCEL AND CSV BUTTONS */
+
+function setReadinessColors() {
+  let openDates = document.getElementsByClassName("openDateCell");
+  for (let i = 0; i < openDates.length; i++) {
+    if (compareDateStrings(openDates[i].innerHTML, launchDate) == "issues") {
+      openDates[i].style.backgroundColor = "lightcoral";
+    } else {
+      openDates[i].style.backgroundColor = "lime";
+    }
+  }
+}
+
+/* START CONVERT STRING DATES TO TIME */
+function compareDateStrings(openDateString, launchDateString) {
+  // let arrivalDateString = "24 Sep 2020";
+  // let startDateString = "2020-07-16";
+  let openDateArgs = [];
+  let launchDateArgs = [];
+  let openDateYear = parseInt(openDateString.substr(7, 4));
+  let openDateMonth = convertMonthStringToInt(openDateString.substr(3, 3));
+  let openDateDay = parseInt(openDateString.substr(0, 2));
+  let launchDateYear = parseInt(launchDateString.substr(0, 4));
+  let launchDateMonth = parseInt(launchDateString.substr(5, 2));
+  let launchDateDay = parseInt(launchDateString.substr(8, 2));
+
+  openDateArgs[0] = openDateYear;
+  openDateArgs[1] = openDateMonth;
+  openDateArgs[2] = openDateDay;
+  launchDateArgs[0] = launchDateYear;
+  launchDateArgs[1] = launchDateMonth;
+  launchDateArgs[2] = launchDateDay;
+
+  let openDateObject = new Date(
+    openDateArgs[0],
+    openDateArgs[1],
+    openDateArgs[2]
+  );
+  let launchDateObject = new Date(
+    launchDateArgs[0],
+    launchDateArgs[1],
+    launchDateArgs[2]
+  );
+  let openTime = openDateObject.getTime();
+  let launchTime = launchDateObject.getTime();
+
+  if (openTime > launchTime) {
+    return "issues";
+  } else {
+    return "noConcerns";
+  }
+
+  function convertMonthStringToInt(monthString) {
+    let monthInt;
+    if (monthString == "Jan") {
+      monthInt = 0;
+    } else if (monthString == "Feb") {
+      monthInt = 1;
+    } else if (monthString == "Mar") {
+      monthInt = 2;
+    } else if (monthString == "Apr") {
+      monthInt = 3;
+    } else if (monthString == "May") {
+      monthInt = 4;
+    } else if (monthString == "Jun") {
+      monthInt = 5;
+    } else if (monthString == "Jul") {
+      monthInt = 6;
+    } else if (monthString == "Aug") {
+      monthInt = 7;
+    } else if (monthString == "Sep") {
+      monthInt = 8;
+    } else if (monthString == "Oct") {
+      monthInt = 9;
+    } else if (monthString == "Nov") {
+      monthInt = 10;
+    } else if (monthString == "Dec") {
+      monthInt = 11;
+    }
+    // console.log(monthInt);
+    return monthInt + 1;
+  }
+}
+/* END CONVERT STRING DATES TO TIME */
+
+// document.onload = alert("Browsers other than Chrome are not supported");
 
 // CHANGE THE BACKGROUND OF AN LI ELEMENT ONCLICK
 //market.classList.add("type");

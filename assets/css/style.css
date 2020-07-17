@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f2f4f7;
 }
@@ -10,7 +10,7 @@ body {
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto auto;
   gap: 1px 1px;
   grid-template-areas: "header" "content" "footer";
 }
@@ -23,7 +23,7 @@ body {
   height: 0.8fr;
   grid-template-areas: "fundDetailsArea marketsArea";
   grid-area: content;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .fundDetailsArea {
@@ -50,13 +50,13 @@ body {
   gap: 1px 1px;
   grid-template-areas: "marketsAreaHeaderArea" "addMarketsButtonsArea" "marketsTablesArea";
   grid-area: marketsArea;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* overflow-y: scroll; */
 }
 
 .fundDetailsArea,
 .marketsArea {
-  border: solid 1px;
+  /* border: solid 1px; */
   padding-left: 10px;
   /* overflow-y: scroll; */
 }
@@ -71,10 +71,6 @@ body {
   display: inline-block;
 }
 
-.marketsTablesArea {
-  overflow-y: scroll;
-  grid-area: marketsTablesArea;
-}
 .marketsAreaHeaderArea {
   grid-area: marketsAreaHeaderArea;
 }
@@ -146,6 +142,42 @@ table {
   margin: 15px 0px;
 }
 
+tr > .datescol {
+  text-align: center;
+}
+
+.blueButton {
+  box-shadow: inset 0px 1px 0px 0px #54a3f7;
+  background: linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);
+  background-color: #007dc1;
+  border-radius: 3px;
+  border: 1px solid #124d77;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 6px 12px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #154682;
+}
+button:hover,
+.close-button:hover {
+  background: linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);
+  background-color: #0061a7;
+}
+button:active,
+.close-button:active {
+  position: relative;
+  top: 1px;
+}
+
+.marketsTablesArea {
+  overflow-y: scroll;
+  grid-area: marketsTablesArea;
+  margin: 10px 0px 0px 0px;
+}
+
 *,
 *::after,
 *::before {
@@ -162,7 +194,7 @@ table {
   border-radius: 10px;
   z-index: 10;
   background-color: white;
-  width: 300px;
+  width: 400px;
   max-width: 80%;
   height: 80%;
   text-align: left;
@@ -183,7 +215,7 @@ table {
 .modal-footer {
   padding: 10px 15px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   /* border-bottom: 1px solid black; */
 }
@@ -226,21 +258,121 @@ table {
   pointer-events: all;
 }
 
+h2 {
+  text-decoration: underline;
+}
+
+#fundButtonsArea {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 30px 0px 5px;
+}
+
+.content {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+h4 {
+  margin: 10px 0px 0px 0px;
+}
+
+#day1header {
+  display: inline;
+}
+
+#day1tagline {
+  display: inline;
+}
+
+#unavailableKey {
+  background-color: lightcoral;
+  /* color: white; */
+}
+
+#availableKey {
+  background-color: lime;
+}
+
+.availability {
+  margin: 20px 5px 0px 5px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+}
+
+#availabilityArea {
+  display: flex;
+  justify-content: center;
+}
+
+#timeframeNote {
+  margin: 50px 20px 0px 5px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: lightyellow;
+}
+
+input[type="radio"] {
+  margin-left: 30px;
+  display: inline-block;
+}
+
+#marketsList > div {
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+}
+
+#marketsList > div > p {
+  /* display: inline-block; */
+  font-size: 1.25em;
+  margin-bottom: 5px;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    max-width: 600px;
+    /* padding-left: auto;
+    padding-right: auto; */
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 1fr;
+    gap: 1px 1px;
+    height: 0.8fr;
+    grid-template-areas: "fundDetailsArea" "marketsArea";
+    grid-area: content;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content {
+    overflow-y: hidden;
+  }
+  .marketsTablesArea {
+    height: calc(100vh - 250px);
+    overflow-y: scroll;
+    /* margin-bottom: 20px; */
+  }
+}
 /* Ul {
   margin: auto;
 }
-
 li {
   list-style-type: none;
   border: solid 1px black;
   padding: 5px 30px;
   background-color: white;
 }
-
 .unselected {
   background-color: white;
 }
-
 .selected {
   background-color: blue;
 } */

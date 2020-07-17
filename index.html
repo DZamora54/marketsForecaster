@@ -29,22 +29,22 @@
               </div>
               <div id="idInputArea">
                 <div class="inputArea">
-                  <label for="wmcid">Internal Account ID</label><br />
+                  <label for="internalId">Internal Account ID</label><br />
                   <input
                     class="fundInput"
                     type="text"
-                    id="wmcid"
-                    name="wmcid"
+                    id="internalId"
+                    name="internalId"
                   />
                 </div>
 
                 <div class="inputArea">
-                  <label for="ssbid">External Fund ID</label><br />
+                  <label for="externalId">External Fund ID</label><br />
                   <input
                     class="fundInput"
                     type="text"
-                    id="ssbid"
-                    name="ssbid"
+                    id="externalId"
+                    name="externalId"
                   />
                 </div>
               </div>
@@ -83,7 +83,9 @@
                   <td class="datescol" id="amlKycCompleteDateCell">
                     XX XXX XXXX
                   </td>
-                  <td class="datescol" id="mchDoneDateCell">XX XXX XXXX</td>
+                  <td class="datescol" id="systemAddDoneDateCell">
+                    XX XXX XXXX
+                  </td>
                   <td class="datescol" id="docsDueFromSscDateCell">
                     XX XXX XXXX
                   </td>
@@ -95,18 +97,46 @@
               </table>
             </div>
 
-            <button
-              type="button"
-              id="submitFundDetails"
-              onclick="submitFundDetails()"
-            >
-              Update Fund Details
-            </button>
-            <button id="exportExcelBtn" class="btn btn-success">
-              Download as Excel</button
-            ><button id="exportCSVBtn" class="btn btn-success">
-              Download as CSV</button
-            ><button>Print</button>
+            <div id="fundButtonsArea">
+              <button
+                class="blueButton"
+                type="button"
+                id="submitFundDetails"
+                onclick="submitFundDetails()"
+              >
+                Update Fund Details
+              </button>
+              <button
+                class="blueButton"
+                id="exportExcelBtn"
+                class="btn btn-success"
+              >
+                Download as Excel</button
+              ><button
+                class="blueButton"
+                id="exportCSVBtn"
+                class="btn btn-success"
+              >
+                Download as CSV
+              </button>
+              <!-- <button class="blueButton">Print</button> -->
+            </div>
+            <div id="availabilityArea">
+              <p class="availability" id="availableKey">
+                Available for Launch
+              </p>
+              <p class="availability" id="unavailableKey">
+                Unavailable for Launch
+              </p>
+            </div>
+            <div>
+              <p id="timeframeNote">
+                Please note that market open dates are calculated using best
+                estimates of timeframes to add funds at the bank once AML/KYC is
+                submitted and timeframes to open markets once all documents are
+                submitted to the local markets.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -116,8 +146,12 @@
           </div>
           <div class="addMarketsButtonsArea">
             <!-- START DAY ONE MODAL -->
-            <button class="addMarketsButton" data-modal-target="#modal">
-              Update Day 1 Markets
+            <button
+              class="blueButton"
+              class="addMarketsButton"
+              data-modal-target="#modal"
+            >
+              Add / Update Markets
             </button>
             <div class="modal" id="modal">
               <div class="modal-header">
@@ -132,19 +166,26 @@
               </div>
               <div class="modal-footer">
                 <button
+                  data-close-button
+                  class="blueButton close-button"
                   type="button"
                   id="submitMarkets"
-                  onclick="getCheckedDayOneMarkets(); removeNonDocDayOneMarketsTables(); removeDocDayOneMarketsTables(); checkforDayOneNonDoc(); checkforDayOneDoc()"
+                  onclick="updateRequestedStatus(); removeNonDocDayOneMarketsTables(); removeDocDayOneMarketsTables(); checkforDayOneNonDoc(); checkforDayOneDoc();removeNonDocAsapMarketsTables(); removeDocAsapMarketsTables(); checkforAsapNonDoc(); checkforAsapDoc(); setReadinessColors()"
                 >
-                  Save Markets
+                  Update Markets Tables
                 </button>
+                <!-- OLD BUTTON FUNCTIONS onclick="getCheckedDayOneMarkets(); removeNonDocDayOneMarketsTables(); removeDocDayOneMarketsTables(); checkforDayOneNonDoc(); checkforDayOneDoc(); setReadinessColors()" -->
               </div>
             </div>
             <div id="overlay"></div>
             <!-- END DAY ONE MODAL -->
 
             <!-- START REQUIRED ASAP MODAL -->
-            <button class="addMarketsButton" data-modal-target="#modal2">
+            <!-- <button
+              class="blueButton"
+              class="addMarketsButton"
+              data-modal-target="#modal2"
+            >
               Update Required ASAP Markets
             </button>
             <div class="modal" id="modal2">
@@ -159,31 +200,32 @@
               </div>
               <div class="modal-footer">
                 <button
+                  class="blueButton"
                   type="button"
                   id="submitMarkets2"
-                  onclick="getCheckedAsapMarkets(); removeNonDocAsapMarketsTables(); removeDocAsapMarketsTables(); checkforAsapNonDoc(); checkforAsapDoc()"
+                  onclick="getCheckedAsapMarkets(); removeNonDocAsapMarketsTables(); removeDocAsapMarketsTables(); checkforAsapNonDoc(); checkforAsapDoc(); setReadinessColors()"
                 >
                   Update Market Tables
                 </button>
               </div>
             </div>
-            <div id="overlay"></div>
+            <div id="overlay"></div> -->
             <!-- END REQUIRED ASAP MOAL -->
           </div>
           <div class="marketsTablesArea">
             <!-- START DAY ONE MARKETS AREA -->
             <div class="dayOneMarketsArea">
-              <h3>Day 1 Markets</h3>
-              <p>Could impact funding if not obtained</p>
+              <h3 id="day1header">Day 1 Markets</h3>
+              <p id="day1tagline">- Could impact funding if not obtained</p>
 
               <!-- START NON DOCS DAY 1 -->
-              <h4>Day 1 Non Doc Markets</h4>
+              <!-- <h4>Day 1 Non Doc Markets</h4> -->
               <div id="nonDocsDayOne"></div>
               <table id="table1"></table>
               <!-- END NON DOCS DAY 1 -->
 
               <!-- START DOCS DAY 1 -->
-              <h4>Day 1 Doc Markets</h4>
+              <!-- <h4>Day 1 Doc Markets</h4> -->
               <div id="docsDayOne"></div>
               <table id="table2"></table>
               <!-- END DOCS DAY 1 -->
@@ -195,13 +237,13 @@
               <h3>Required ASAP Markets</h3>
 
               <!-- START NON DOC ASAP -->
-              <h4>Required - ASAP Non Doc Markets</h4>
+              <!-- <h4>Required - ASAP Non Doc Markets</h4> -->
               <div id="nonDocAsap"></div>
               <table id="table3"></table>
               <!-- END NON DOC ASAP -->
 
               <!-- START DOCS ASAP -->
-              <h4>Required - ASAP Doc Markets</h4>
+              <!-- <h4>Required - ASAP Doc Markets</h4> -->
               <div id="docsAsap"></div>
               <table id="table4"></table>
               <!-- END DOCS ASAP -->
